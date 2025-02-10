@@ -4,6 +4,7 @@ import csv
 import os
 import urllib.parse
 import logging
+import argparse
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -243,5 +244,27 @@ def main_menu():
         else:
             logging.error("Invalid option selected.")
 
+
+
+def main():
+    """Handle command-line arguments and run the appropriate function."""
+    parser = argparse.ArgumentParser(description="DeckMaster: A tool to compare Magic: The Gathering decklists.")
+    parser.add_argument("--commander", help="Scrape a decklist from EDHREC for the given commander.")
+    parser.add_argument("--custom", help="Use a custom decklist from the specified file.")
+    args = parser.parse_args()
+
+    if args.commander:
+        # Scrape from EDHREC
+        logging.info(f"Fetching decklist for commander: {args.commander}")
+        scrape_and_process_commander(args.commander)
+    elif args.custom:
+        # Use a custom decklist
+        logging.info(f"Using custom decklist from: {args.custom}")
+        process_custom_decklist(args.custom)
+    else:
+        # No arguments provided, show the interactive menu
+        main_menu()
+
 if __name__ == "__main__":
-    main_menu()
+    main()  # Replace the call to main_menu() with main()
+
