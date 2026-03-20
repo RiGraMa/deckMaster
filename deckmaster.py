@@ -1,3 +1,6 @@
+"""deckmaster.py"""
+
+
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -5,6 +8,8 @@ import os
 import urllib.parse
 import logging
 import argparse
+import json
+import db_collection
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -50,13 +55,12 @@ def process_custom_decklist(decklist_path):
         if os.path.isfile(COLLECTION_FILE):
             logging.info("Collection file found. Comparing...")
 
-            collection_cards = set()
-            with open(COLLECTION_FILE, mode="r", newline="", encoding="utf-8") as collection_file:
-                collection_reader = csv.reader(collection_file)
-                next(collection_reader)  # Skip header
-                for row in collection_reader:
-                    if len(row) >= 7:  # Ensure row has enough columns
-                        collection_cards.add(row[0].strip().lower())
+            collection_dict = db_collection.load_collection_from_db()
+            if not collection_dict:
+                logging.warning("Could not load collection from database")
+                return
+
+            collection_cards = set(collection_dict.keys())  # Convert to set for comparison
 
             # Compare the decklist with the collection
             owned_cards = []
@@ -92,7 +96,12 @@ def process_custom_decklist(decklist_path):
         logging.error(f"An error occurred while processing the custom decklist: {e}")
 
 def scrape_and_process_commander(commander_name):
-    """Scrapes EDHREC data for a commander, creates necessary folders, and generates CSV files."""
+    """
+    Scrapes EDHREC data for a commander using JSON parsing.
+    
+    EDHREC now uses Next.js and stores data in __NEXT_DATA__ JSON.
+    This is more reliable than the old CSS selector method.
+    """
     # Format and encode the commander's name for the URL
     formatted_name = commander_name.replace(",", "").replace("'", "").replace(" ", "-").lower()
     encoded_name = urllib.parse.quote(formatted_name)
@@ -108,90 +117,105 @@ def scrape_and_process_commander(commander_name):
     try:
         # Send a GET request to the URL
         response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for HTTP errors
+        response.raise_for_status()
 
         # Parse the HTML content with BeautifulSoup
         soup = BeautifulSoup(response.content, "lxml")
 
-        # Use a CSS selector to locate the decklist
-        content = soup.select("code")
+        # NEW METHOD: Find the Next.js JSON data
+        next_data = soup.find('script', {'id': '__NEXT_DATA__', 'type': 'application/json'})
+        
+        if not next_data or not next_data.string:
+            logging.error("Could not find __NEXT_DATA__ in the page")
+            if os.path.exists(commander_folder) and not os.listdir(commander_folder):
+                os.rmdir(commander_folder)
+            return
+        
+        # Parse the JSON
+        data = json.loads(next_data.string)
+        
+        # Navigate to the decklist
+        page_data = data.get('props', {}).get('pageProps', {}).get('data', {})
+        decklist = page_data.get('deck', [])
+        
+        if not decklist:
+            logging.warning("Decklist not found in JSON data")
+            if os.path.exists(commander_folder) and not os.listdir(commander_folder):
+                os.rmdir(commander_folder)
+            return
+        
+        logging.info(f"Found decklist with {len(decklist)} cards")
+        
+        # Parse the decklist (format: "1 Card Name")
+        rows = []
+        for card_line in decklist:
+            # Split on first space to separate quantity from name
+            parts = card_line.split(' ', 1)
+            if len(parts) == 2:
+                rows.append(parts)  # [quantity, name]
+        
+        # Save the content to a CSV file
+        csv_path = os.path.join(commander_folder, f"{formatted_name}.csv")
+        with open(csv_path, mode="w", newline="", encoding="utf-8") as file:
+            writer = csv.writer(file)
+            writer.writerow(["Quantity", "Name"])  # Write header
+            writer.writerows(rows)
 
-        if content:
-            # Extract the text from the first matching element
-            content_text = content[0].get_text(strip=True)
+        logging.info(f"Decklist saved to {csv_path}")
 
-            # Remove double quotes and process the content
-            content_text = content_text.replace('"', '')
-            if len(content_text) > 1:
-                content_text = content_text[1:]
+        # Compare with collection file (if it exists)
+        if os.path.isfile(COLLECTION_FILE):
+            logging.info("Collection file found. Comparing...")
 
-            # Prepare data for CSV
-            rows = [line.split(" ", 1) for line in content_text.splitlines() if line.strip()]
+            collection_cards = set()
+            with open(COLLECTION_FILE, mode="r", newline="", encoding="utf-8") as collection_file:
+                collection_reader = csv.reader(collection_file)
+                next(collection_reader)  # Skip header
+                for row in collection_reader:
+                    if len(row) >= 7:  # Ensure row has enough columns
+                        collection_cards.add(row[0].strip().lower())
 
-            # Save the content to a CSV file
-            csv_path = os.path.join(commander_folder, f"{formatted_name}.csv")
-            with open(csv_path, mode="w", newline="", encoding="utf-8") as file:
-                writer = csv.writer(file)
-                writer.writerow(["Quantity", "Name"])  # Write header
-                writer.writerows(rows)
+            # Compare the decklist with the collection
+            owned_cards = []
+            not_owned_cards = []
 
-            logging.info(f"Decklist saved to {csv_path}")
+            for quantity, name in rows:
+                card_name = name.strip().lower()
+                if card_name in collection_cards:
+                    owned_cards.append([quantity, name])
+                else:
+                    not_owned_cards.append([quantity, name])
 
-            # Compare with collection file (if it exists)
-            if os.path.isfile(COLLECTION_FILE):
-                logging.info("Collection file found. Comparing...")
+            # Write owned cards to a CSV file
+            with open(os.path.join(commander_folder, "owned_cards.csv"), mode="w", newline="", encoding="utf-8") as owned_file:
+                writer = csv.writer(owned_file)
+                writer.writerow(["Quantity", "Name"])
+                writer.writerows(owned_cards)
 
-                collection_cards = set()
-                with open(COLLECTION_FILE, mode="r", newline="", encoding="utf-8") as collection_file:
-                    collection_reader = csv.reader(collection_file)
-                    next(collection_reader)  # Skip header
-                    for row in collection_reader:
-                        if len(row) >= 7:  # Ensure row has enough columns
-                            collection_cards.add(row[0].strip().lower())
+            # Write not owned cards to a CSV file
+            with open(os.path.join(commander_folder, "not_owned_cards.csv"), mode="w", newline="", encoding="utf-8") as not_owned_file:
+                writer = csv.writer(not_owned_file)
+                writer.writerow(["Quantity", "Name"])
+                writer.writerows(not_owned_cards)
 
-                # Compare the web CSV content with the collection
-                owned_cards = []
-                not_owned_cards = []
-
-                with open(csv_path, mode="r", newline="", encoding="utf-8") as web_file:
-                    web_reader = csv.reader(web_file)
-                    next(web_reader)  # Skip header
-                    for row in web_reader:
-                        if len(row) >= 2:
-                            quantity, name = row
-                            card_name = name.strip().lower()
-                            if card_name in collection_cards:
-                                owned_cards.append([quantity, name])
-                            else:
-                                not_owned_cards.append([quantity, name])
-
-                # Write owned cards to a CSV file
-                with open(os.path.join(commander_folder, "owned_cards.csv"), mode="w", newline="", encoding="utf-8") as owned_file:
-                    writer = csv.writer(owned_file)
-                    writer.writerow(["Quantity", "Name"])
-                    writer.writerows(owned_cards)
-
-                # Write not owned cards to a CSV file
-                with open(os.path.join(commander_folder, "not_owned_cards.csv"), mode="w", newline="", encoding="utf-8") as not_owned_file:
-                    writer = csv.writer(not_owned_file)
-                    writer.writerow(["Quantity", "Name"])
-                    writer.writerows(not_owned_cards)
-
-                logging.info("Comparison completed.")
-                logging.info(f"Owned cards saved to {os.path.join(commander_folder, 'owned_cards.csv')}")
-                logging.info(f"Not owned cards saved to {os.path.join(commander_folder, 'not_owned_cards.csv')}")
-            else:
-                logging.warning("Collection file not found.")
-
+            logging.info("Comparison completed.")
+            logging.info(f"Owned cards saved to {os.path.join(commander_folder, 'owned_cards.csv')}")
+            logging.info(f"Not owned cards saved to {os.path.join(commander_folder, 'not_owned_cards.csv')}")
         else:
-            logging.warning("Decklist not found using the CSS selector.")
-            os.rmdir(commander_folder)  # Delete empty folder if no content
+            logging.warning("Collection file not found.")
 
     except requests.exceptions.RequestException as e:
         logging.error(f"Error fetching data: {e}")
-        os.rmdir(commander_folder)  # Delete empty folder on error
+        if os.path.exists(commander_folder) and not os.listdir(commander_folder):
+            os.rmdir(commander_folder)
+    except json.JSONDecodeError as e:
+        logging.error(f"Error parsing JSON data: {e}")
+        if os.path.exists(commander_folder) and not os.listdir(commander_folder):
+            os.rmdir(commander_folder)
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
+        import traceback
+        traceback.print_exc()
 
 def display_custom_decklists():
     """Display all custom decklists in the folder and allow the user to select one."""
@@ -245,7 +269,6 @@ def main_menu():
             logging.error("Invalid option selected.")
 
 
-
 def main():
     """Handle command-line arguments and run the appropriate function."""
     parser = argparse.ArgumentParser(description="DeckMaster: A tool to compare Magic: The Gathering decklists.")
@@ -266,5 +289,4 @@ def main():
         main_menu()
 
 if __name__ == "__main__":
-    main()  # Replace the call to main_menu() with main()
-
+    main()

@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+deckmaster/
+
+# Program outputs
+commanders/
+costume DeckLists/
+meta_cache/
+meta_decks/
+
+# Database
+deckmaster.db

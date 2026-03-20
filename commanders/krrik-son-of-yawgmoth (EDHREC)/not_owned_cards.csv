@@ -11,7 +11,6 @@ Quantity,Name
 1,Cabal Coffers
 1,Cabal Ritual
 1,"Chainer, Dementia Master"
-1,Chrome Mox
 1,Culling the Weak
 1,Dark Petition
 1,Dauthi Voidwalker
@@ -23,16 +22,17 @@ Quantity,Name
 1,Grim Tutor
 1,Hoarding Broodlord
 1,Mana Vault
-1,Necromancy
 1,Necropotence
 1,Necrotic Ooze
 1,"Nykthos, Shrine to Nyx"
 1,Opposition Agent
 1,Orcish Bowmasters
+1,Phyrexian Tower
 1,Pontiff of Blight
 1,Professor Onyx
 1,"Razaketh, the Foulblooded"
 1,Sacrifice
+1,Saw in Half
 1,Sensei's Divining Top
 1,"Sheoldred, the Apocalypse"
 1,Toxic Deluge
@@ -40,3 +40,4 @@ Quantity,Name
 1,Vampiric Tutor
 1,Vile Entomber
 1,"Vilis, Broker of Blood"
+1,Wishclaw Talisman
