@@ -9,9 +9,29 @@
   <p>Fetch an average decklist from EDHREC</p>
 </div>
 
-<div class="coming-soon">
-  <h2>Coming Soon</h2>
-  <p>EDHREC scraper integration is coming in Phase 2.</p>
+<div class="panel">
+  <form method="POST" action="{{ url_for('commander.scrape_post') }}" class="scrape-form">
+    <label class="form-label" for="commander_name">Commander name</label>
+    <div class="form-row">
+      <input
+        id="commander_name"
+        name="commander_name"
+        type="text"
+        placeholder="e.g. Atraxa, Praetors' Voice"
+        value="{{ commander_name or '' }}"
+        required
+        autofocus
+      />
+      <button class="btn" type="submit">Scrape</button>
+    </div>
+    <p class="form-hint">This pulls EDHREC’s “Average Deck” list and saves it into your local `commanders/` folder.</p>
+  </form>
+
+  {% if error %}
+    <div class="alert alert-error">
+      <strong>Scrape failed.</strong> {{ error }}
+    </div>
+  {% endif %}
 </div>
 
 {% endblock %}
