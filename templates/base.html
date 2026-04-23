@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}DeckMaster{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-brand" href="/">DeckMaster</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link {% if request.endpoint == 'collection.index' %}active{% endif %}">
+      Collection
+    </a>
+    <a href="/scrape" class="nav-link {% if request.endpoint == 'commander.scrape' %}active{% endif %}">
+      Scrape
+    </a>
+  </div>
+</nav>
+
+<main class="page-content">
+  {% block content %}{% endblock %}
+</main>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

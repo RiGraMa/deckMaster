@@ -1,363 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{{ commander }} — DeckMaster</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg:       #0a0a0f;
-      --surface:  #12121a;
-      --border:   #2a2a3a;
-      --gold:     #c9a84c;
-      --gold-dim: #7a6030;
-      --text:     #e8e4d8;
-      --text-dim: #7a7868;
-      --red:      #c94c4c;
-      --red-bg:   rgba(201,76,76,0.08);
-      --green:    #4cac6c;
-      --green-bg: rgba(76,172,108,0.08);
-    }
+{% extends "base.html" %}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+{% block title %}{{ commander }} — DeckMaster{% endblock %}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Crimson Pro', Georgia, serif;
-      min-height: 100vh;
-      background-image:
-        radial-gradient(ellipse 80% 40% at 50% -5%, rgba(201,168,76,0.06), transparent),
-        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+{% block content %}
 
-    header {
-      padding: 2rem 2rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
+<a class="back-link" href="/">← All Commanders</a>
 
-    .back {
-      font-family: 'Cinzel', serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      color: var(--gold-dim);
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-    .back:hover { color: var(--gold); }
+<div class="page-header">
+  <h1>{{ commander.replace('-', ' ').replace('(Custom)', '').replace('(EDHREC)', '').strip() }}</h1>
+  <div class="stats">
+    <span class="stat"><span class="dot dot-gold"></span> {{ total }} cards total</span>
+    <span class="stat"><span class="dot dot-green"></span> {{ owned_count }} owned</span>
+    <span class="stat"><span class="dot dot-red"></span> {{ missing_count }} missing</span>
+  </div>
+  <div class="progress-bar">
+    <div class="progress-fill" style="width: {{ (owned_count / total * 100)|round|int if total > 0 else 0 }}%"></div>
+  </div>
+</div>
 
-    .header-info { flex: 1; }
+{% if owned %}
+<div class="section-header">
+  <span class="section-label green" style="margin-bottom:0">✓ Owned</span>
+  <span class="section-count">{{ owned_count }} card{% if owned_count != 1 %}s{% endif %}</span>
+</div>
 
-    header h1 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(1.4rem, 3vw, 2.2rem);
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      background: linear-gradient(135deg, #e8d48a, #c9a84c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .stats {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 0.6rem;
-      flex-wrap: wrap;
-    }
-
-    .stat {
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .stat .dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    .dot-green { background: var(--green); }
-    .dot-red   { background: var(--red); }
-    .dot-gold  { background: var(--gold); }
-
-    .progress-bar {
-      width: 200px;
-      height: 4px;
-      background: var(--border);
-      border-radius: 2px;
-      overflow: hidden;
-      margin-top: 0.5rem;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--green), #6dcc8a);
-      border-radius: 2px;
-      transition: width 1s ease;
-    }
-
-    main {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .section-header:first-child { margin-top: 0; }
-
-    .section-title {
-      font-family: 'Cinzel', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-    }
-
-    .section-title.owned   { color: var(--green); }
-    .section-title.missing { color: var(--red); }
-
-    .section-count {
-      font-size: 0.85rem;
-      color: var(--text-dim);
-      font-style: italic;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 0.75rem;
-    }
-
-    .card-item {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      aspect-ratio: 488/680;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card-item:hover {
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.6);
-      z-index: 10;
-    }
-
-    .card-item.owned-card  { border-color: rgba(76,172,108,0.3); }
-    .card-item.missing-card { border-color: rgba(201,76,76,0.3); }
-
-    .card-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .card-item img.loaded { opacity: 1; }
-
-    .card-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0.75rem;
-      text-align: center;
-      gap: 0.5rem;
-    }
-
-    .card-placeholder .card-name {
-      font-family: 'Cinzel', serif;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      line-height: 1.3;
-      color: var(--text);
-    }
-
-    .card-placeholder .qty-badge {
-      font-size: 0.7rem;
-      color: var(--text-dim);
-      font-style: italic;
-    }
-
-    .card-placeholder .spinner {
-      width: 20px; height: 20px;
-      border: 2px solid var(--border);
-      border-top-color: var(--gold-dim);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    .qty-overlay {
-      position: absolute;
-      top: 6px; right: 6px;
-      background: rgba(0,0,0,0.75);
-      color: var(--gold);
-      font-family: 'Cinzel', serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 3px;
-      pointer-events: none;
-    }
-
-    .missing-overlay {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(transparent, rgba(201,76,76,0.5));
-      height: 40%;
-      pointer-events: none;
-      border-radius: 0 0 8px 8px;
-    }
-
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 2.5rem 0;
-    }
-
-    /* Tooltip on hover */
-    .card-item .tooltip {
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-4px);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-size: 0.75rem;
-      padding: 4px 8px;
-      border-radius: 4px;
-      white-space: nowrap;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.15s;
-      z-index: 100;
-      font-family: 'Cinzel', serif;
-      letter-spacing: 0.05em;
-    }
-
-    .card-item:hover .tooltip { opacity: 1; }
-  </style>
-</head>
-<body>
-
-<header>
-  <a class="back" href="/">← All Commanders</a>
-  <div class="header-info">
-    <h1>{{ commander.replace('-', ' ').replace('(Custom)', '').replace('(EDHREC)', '').strip() }}</h1>
-    <div class="stats">
-      <span class="stat"><span class="dot dot-gold"></span> {{ total }} cards total</span>
-      <span class="stat"><span class="dot dot-green"></span> {{ owned_count }} owned</span>
-      <span class="stat"><span class="dot dot-red"></span> {{ missing_count }} missing</span>
+<div class="card-grid">
+  {% for card in owned %}
+  <div class="card-item owned-card"
+       data-scryfall-id="{{ card.scryfall_id or '' }}"
+       data-name="{{ card.name }}">
+    <div class="card-placeholder">
+      <div class="spinner"></div>
+      <div class="card-name">{{ card.name }}</div>
     </div>
-    <div class="progress-bar">
-      <div class="progress-fill" style="width: {{ (owned_count / total * 100)|round|int if total > 0 else 0 }}%"></div>
+    <img alt="{{ card.name }}"/>
+    {% if card.quantity > 1 %}<span class="qty-overlay">×{{ card.quantity }}</span>{% endif %}
+    <span class="tooltip">{{ card.name }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if owned and missing %}<hr class="divider">{% endif %}
+
+{% if missing %}
+<div class="section-header">
+  <span class="section-label red" style="margin-bottom:0">✗ Missing</span>
+  <span class="section-count">{{ missing_count }} card{% if missing_count != 1 %}s{% endif %}</span>
+</div>
+
+<div class="card-grid">
+  {% for card in missing %}
+  <div class="card-item missing-card"
+       data-scryfall-id=""
+       data-name="{{ card.name }}">
+    <div class="card-placeholder">
+      <div class="spinner"></div>
+      <div class="card-name">{{ card.name }}</div>
     </div>
+    <img alt="{{ card.name }}"/>
+    {% if card.quantity > 1 %}<span class="qty-overlay">×{{ card.quantity }}</span>{% endif %}
+    <div class="missing-overlay"></div>
+    <span class="tooltip">{{ card.name }}</span>
   </div>
-</header>
+  {% endfor %}
+</div>
+{% endif %}
 
-<main>
+{% endblock %}
 
-  {% if owned %}
-  <div class="section-header">
-    <span class="section-title owned">✓ Owned</span>
-    <span class="section-count">{{ owned_count }} card{% if owned_count != 1 %}s{% endif %}</span>
-  </div>
-
-  <div class="card-grid">
-    {% for card in owned %}
-    <div class="card-item owned-card"
-         data-scryfall-id="{{ card.scryfall_id or '' }}"
-         data-name="{{ card.name }}">
-      <div class="card-placeholder">
-        <div class="spinner"></div>
-        <div class="card-name">{{ card.name }}</div>
-      </div>
-      <img alt="{{ card.name }}" />
-      {% if card.quantity > 1 %}
-      <span class="qty-overlay">×{{ card.quantity }}</span>
-      {% endif %}
-      <span class="tooltip">{{ card.name }}</span>
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
-
-  {% if owned and missing %}<hr class="divider">{% endif %}
-
-  {% if missing %}
-  <div class="section-header">
-    <span class="section-title missing">✗ Missing</span>
-    <span class="section-count">{{ missing_count }} card{% if missing_count != 1 %}s{% endif %}</span>
-  </div>
-
-  <div class="card-grid">
-    {% for card in missing %}
-    <div class="card-item missing-card"
-         data-scryfall-id=""
-         data-name="{{ card.name }}">
-      <div class="card-placeholder">
-        <div class="spinner"></div>
-        <div class="card-name">{{ card.name }}</div>
-      </div>
-      <img alt="{{ card.name }}" />
-      {% if card.quantity > 1 %}
-      <span class="qty-overlay">×{{ card.quantity }}</span>
-      {% endif %}
-      <div class="missing-overlay"></div>
-      <span class="tooltip">{{ card.name }}</span>
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
-
-</main>
-
+{% block scripts %}
 <script>
-  /**
-   * Lazy-load card images via /api/card-image endpoint.
-   * Batches requests to avoid hammering Scryfall (100ms between calls).
-   */
   const cards = document.querySelectorAll('.card-item');
   let index = 0;
 
   async function loadNext() {
     if (index >= cards.length) return;
 
-    const card = cards[index++];
-    const scryfallId = card.dataset.scryfallId;
-    const name       = card.dataset.name;
-    const img        = card.querySelector('img');
+    const card        = cards[index++];
+    const scryfallId  = card.dataset.scryfallId;
+    const name        = card.dataset.name;
+    const img         = card.querySelector('img');
     const placeholder = card.querySelector('.card-placeholder');
 
-    // Build API URL — prefer ID, fall back to name
     const params = scryfallId
       ? `?id=${encodeURIComponent(scryfallId)}`
       : `?name=${encodeURIComponent(name)}`;
@@ -373,20 +98,15 @@
           placeholder.style.display = 'none';
         };
       } else {
-        // Show card name if image not found
         placeholder.querySelector('.spinner').style.display = 'none';
       }
     } catch {
       placeholder.querySelector('.spinner').style.display = 'none';
     }
 
-    // 110ms delay between requests — stays within Scryfall's rate limit
     setTimeout(loadNext, 110);
   }
 
-  // Kick off loading
   loadNext();
 </script>
-
-</body>
-</html>
+{% endblock %}

@@ -1676,7 +1676,7 @@ Furtive Courier,MKM,Murders at Karlov Manor,59,normal,uncommon,1,90953,6f359fc2-
 Torch the Witness,MKM,Murders at Karlov Manor,146,normal,uncommon,1,90718,22bbf709-d8e9-4e3b-8ec8-206f1b2162b3,0.12,false,false,near_mint,en,EUR
 Flotsam // Jetsam,MKM,Murders at Karlov Manor,247,normal,uncommon,1,91177,c1500cbf-5619-465e-a97b-75e676ce789b,0.1,false,false,near_mint,en,EUR
 Culvert Ambusher,MKM,Murders at Karlov Manor,158,normal,uncommon,1,90756,2ccdc58b-1e7e-402c-88f9-c789ff1dae31,0.1,false,false,near_mint,en,EUR
-Extract a Confession,MKM,Murders at Karlov Manor,84,normal,common,2,90724,256c8b6e-4031-458b-8eb9-bbfe58405a0c,0.07,false,false,near_mint,en,EUR
+Extract a Confession,MKM,Murders at Karlov Manor,84,normal,common,1,90724,256c8b6e-4031-458b-8eb9-bbfe58405a0c,0.07,false,false,near_mint,en,EUR
 Public Thoroughfare,MKM,Murders at Karlov Manor,265,normal,common,3,90703,1f8b915f-3e82-4b05-b963-01ebff7a8f7b,0.09,false,false,near_mint,en,EUR
 Bite Down on Crime,MKM,Murders at Karlov Manor,154,normal,common,1,90742,29bbfe93-8225-444c-835b-33ffa006ef66,0.02,false,false,near_mint,en,EUR
 Rot Farm Mortipede,MKM,Murders at Karlov Manor,102,normal,common,2,90617,023b0142-663a-47e7-a9f1-0b565a172b60,0.04,false,false,near_mint,en,EUR
@@ -2069,7 +2069,7 @@ Frontier Seeker,OTJ,Outlaws of Thunder Junction,13,normal,uncommon,1,93267,9368c
 Stagecoach Security,OTJ,Outlaws of Thunder Junction,30,normal,common,4,93086,21301998-b3e6-4f3d-89f4-5e17aeb79a1e,0.06,false,false,near_mint,en,EUR
 Stagecoach Security,OTJ,Outlaws of Thunder Junction,30,foil,common,2,93086,21301998-b3e6-4f3d-89f4-5e17aeb79a1e,0.08,false,false,near_mint,en,EUR
 Vengeful Townsfolk,OTJ,Outlaws of Thunder Junction,37,normal,common,4,93102,2df404af-571a-4867-83f5-bb4163b433ff,0.03,false,false,near_mint,en,EUR
-Outlaw Medic,OTJ,Outlaws of Thunder Junction,23,normal,common,4,93107,2feaa51e-47fb-4849-b420-ee7278f3489a,0.07,false,false,near_mint,en,EUR
+Outlaw Medic,OTJ,Outlaws of Thunder Junction,23,normal,common,1,93107,2feaa51e-47fb-4849-b420-ee7278f3489a,0.07,false,false,near_mint,en,EUR
 Sterling Keykeeper,OTJ,Outlaws of Thunder Junction,32,normal,common,2,93026,019d539f-04c2-43f1-8677-6d6fbb0e94f7,0.04,false,false,near_mint,en,EUR
 Holy Cow,OTJ,Outlaws of Thunder Junction,16,normal,common,5,93261,90de84c9-941b-4056-8501-ce8a948b9643,0.09,false,false,near_mint,en,EUR
 Sterling Supplier,OTJ,Outlaws of Thunder Junction,33,normal,common,4,93314,b6000be7-67db-440e-87ba-276df20b803e,0.04,false,false,near_mint,en,EUR
@@ -3082,7 +3082,6 @@ Zombie Master,PW24,Wizards Play Network 2024,3,foil,rare,1,86984,225cbe61-8117-4
 Wojek Investigator,MKM,Murders at Karlov Manor,429,foil,rare,3,90891,58eccc85-bdfe-48f4-a79e-76d9ef122815,0.15,false,false,near_mint,en,EUR
 Oltec Matterweaver,PW24,Wizards Play Network 2024,12,foil,mythic,2,93016,63ecaef8-3a3f-4027-9692-9dae6f718aef,0.45,false,false,near_mint,en,EUR
 Cavern of Souls,LCI,The Lost Caverns of Ixalan,410b,foil,mythic,2,86340,fcc626a1-cfb0-4e1f-80fc-7c1ff07ee424,28.76,false,false,near_mint,en,EUR
-"Oko, the Ringleader",POTJ,Outlaws of Thunder Junction Promos,223p,foil,mythic,1,94058,5f5980e1-f732-4abc-8f6f-fd7eda770870,11.79,false,false,near_mint,en,EUR
 "Vadmir, New Blood",POTJ,Outlaws of Thunder Junction Promos,113p,normal,rare,1,94154,fb51f657-59eb-4f52-9b31-ef8bb6872ab4,0.35,false,false,near_mint,en,EUR
 Make Your Own Luck,OTJ,Outlaws of Thunder Junction,371,normal,uncommon,2,93374,d9073963-5866-4132-a059-a46f96cd2a8d,0.12,false,false,near_mint,en,EUR
 Soulless Jailer,PONE,Phyrexia: All Will Be One Promos,241p,normal,rare,1,79099,186f6703-e2af-4b44-b69f-5074fcada685,0.41,false,false,near_mint,en,EUR
@@ -5378,17 +5377,17 @@ Timeline Culler,EOE,Edge of Eternities,121,foil,uncommon,1,106991,33410410-72f2-
 Forest,EOE,Edge of Eternities,275,foil,common,1,107213,fb62605c-a58e-4e53-8336-b2bee316b5a6,0.13,false,false,near_mint,en,EUR
 Beyond the Quiet,EOE,Edge of Eternities,7,normal,rare,1,107547,ce503869-8130-4afe-9691-4e90376b4bc4,0.18,false,false,near_mint,en,EUR
 Tractor Beam,EOE,Edge of Eternities,82,foil,uncommon,1,107579,efc96d54-d6e1-49b6-b4c2-70b997776548,0.21,false,false,near_mint,en,EUR
-Zero Point Ballad,EOE,Edge of Eternities,128,normal,rare,1,107722,59cf9f4d-54cd-4cda-9726-65e16100ab46,0.02,false,false,near_mint,en,EUR
+Zero Point Ballad,EOE,Edge of Eternities,128,normal,rare,2,107722,59cf9f4d-54cd-4cda-9726-65e16100ab46,0.02,false,false,near_mint,en,EUR
 Lithobraking,EOE,Edge of Eternities,142,normal,uncommon,2,107438,5a22024c-2c0f-4487-98d1-ee89cf3dba89,0.15,false,false,near_mint,en,EUR
 All-Fates Stalker,EOE,Edge of Eternities,3,normal,uncommon,1,107474,82ae4f7b-8122-4af6-8079-888eabf1a11e,0.2,false,false,near_mint,en,EUR
-Meltstrider's Gear,EOE,Edge of Eternities,198,normal,common,1,107775,d75629cb-91e2-46fa-9c80-6feb29e1ceb8,0.16,false,false,near_mint,en,EUR
+Meltstrider's Gear,EOE,Edge of Eternities,198,normal,common,2,107775,d75629cb-91e2-46fa-9c80-6feb29e1ceb8,0.09,false,false,near_mint,en,EUR
 All-Fates Scroll,EOE,Edge of Eternities,234,normal,uncommon,1,107407,3a5ed010-cb17-45df-b169-ebc807dae534,0.21,false,false,near_mint,en,EUR
 Scrounge for Eternity,EOE,Edge of Eternities,114,normal,uncommon,1,107762,baeff907-017e-4dee-aae1-19dfaab309de,0.17,false,false,near_mint,en,EUR
 Divert Disaster,EOE,Edge of Eternities,55,normal,common,2,107770,c5f7d2fe-628b-4493-8281-0e5f91ce5d61,0.13,false,false,near_mint,en,EUR
 Chrome Companion,EOE,Edge of Eternities,236,foil,common,1,107088,8ef269a0-1cb9-4901-81e6-43db3ae3756c,0.24,false,false,near_mint,en,EUR
 Mountain,EOE,Edge of Eternities,273,normal,common,1,107028,5cd39b01-9a06-4575-9c63-9fb3ba9ef101,0.1,false,false,near_mint,en,EUR
 Lander,TEOE,Edge of Eternities Tokens,4,normal,common,1,107755,b25a7de0-0d5d-4b7a-a1bf-7483fa51392a,,false,false,near_mint,en,EUR
-Cryoshatter,EOE,Edge of Eternities,53,normal,common,1,107738,7b62b1e2-9e43-4a66-a647-7e5de2871f2a,0.16,false,false,near_mint,en,EUR
+Cryoshatter,EOE,Edge of Eternities,53,normal,common,2,107738,7b62b1e2-9e43-4a66-a647-7e5de2871f2a,0.09,false,false,near_mint,en,EUR
 Dawnstrike Vanguard,EOE,Edge of Eternities,10,foil,uncommon,1,107723,5a041722-9483-469f-9c17-7f0253b0db50,0.14,false,false,near_mint,en,EUR
 Illvoi Galeblade,EOE,Edge of Eternities,58,normal,common,1,107060,769f7d13-a312-4d79-8639-6ae248452448,0.19,false,false,near_mint,en,EUR
 Starfield Shepherd,EOE,Edge of Eternities,37,normal,uncommon,1,106954,1226e575-aa78-4c68-be1d-6e5c2dc6315b,0.27,false,false,near_mint,en,EUR
@@ -5403,12 +5402,12 @@ Exosuit Savior,EOE,Edge of Eternities,16,normal,common,2,107741,826c0455-a6ce-43
 Starwinder,EOE,Edge of Eternities,79,normal,rare,1,107391,27d1a010-5790-4b35-9fdc-0e366eed021d,0.02,false,false,near_mint,en,EUR
 Hylderblade,EOE,Edge of Eternities,106,normal,uncommon,2,107517,ac80cf18-0707-4358-bdd4-0c2b90d0a1d9,0.08,false,false,near_mint,en,EUR
 Island,EOE,Edge of Eternities,270,normal,common,1,106987,2fb9ecfd-8025-48c0-a306-b4deebde2949,0.16,false,false,near_mint,en,EUR
-The Eternity Elevator,EOE,Edge of Eternities,241,normal,rare,1,106967,1bb90ab9-43b9-4991-806a-0afc4d8caf5f,0.5,false,false,near_mint,en,EUR
+The Eternity Elevator,EOE,Edge of Eternities,241,normal,rare,2,106967,1bb90ab9-43b9-4991-806a-0afc4d8caf5f,0.35,false,false,near_mint,en,EUR
 The Dominion Bracelet,EOE,Edge of Eternities,239,normal,mythic,1,107354,f5360880-2849-45d6-b1aa-08c7e01083af,3.43,false,false,near_mint,en,EUR
 Eumidian Terrabotanist,EOE,Edge of Eternities,180,normal,uncommon,1,107729,64fb2981-86ed-478a-89cd-c6bb078a5bc7,0.15,false,false,near_mint,en,EUR
 Vote Out,EOE,Edge of Eternities,126,foil,uncommon,1,107717,4f50bb47-cc4d-4b81-b5f1-817ca8744d12,0.23,false,false,near_mint,en,EUR
 Swamp,EOE,Edge of Eternities,272,foil,common,1,106944,07ab266b-ad6a-422e-9277-27d9f48d2c29,0.12,false,false,near_mint,en,EUR
-Thawbringer,EOE,Edge of Eternities,211,normal,common,2,107691,0b7f934f-8eb4-408b-a55f-245ec5cc4a8a,0.11,false,false,near_mint,en,EUR
+Thawbringer,EOE,Edge of Eternities,211,normal,common,3,107691,0b7f934f-8eb4-408b-a55f-245ec5cc4a8a,0.08,false,false,near_mint,en,EUR
 Diplomatic Relations,EOE,Edge of Eternities,177,normal,common,1,107778,e0a104c5-61fb-4733-97ab-a31a15a49443,0.14,false,false,near_mint,en,EUR
 Tapestry Warden,EOE,Edge of Eternities,209,normal,uncommon,1,107068,7cbbab6c-43ae-4e50-97ce-532a3316591a,0.17,false,false,near_mint,en,EUR
 Mightform Harmonizer,EOE,Edge of Eternities,200,normal,rare,1,107352,f32302f1-b54f-4489-9d0b-9b771e59da06,0.02,false,false,near_mint,en,EUR
@@ -5418,7 +5417,7 @@ Pull Through the Weft,EOE,Edge of Eternities,202,normal,uncommon,2,107601,a70d08
 Pinnacle Emissary,EOE,Edge of Eternities,223,normal,rare,1,107410,3c922347-f05f-40a4-bbee-6bc02a1e0de5,4.0,false,false,near_mint,en,EUR
 "Mm'menon, Uthros Exile",EOE,Edge of Eternities,221,normal,uncommon,1,107597,5546c044-5826-48c3-9d28-866f3c3c5f2c,0.16,false,false,near_mint,en,EUR
 "Tannuk, Memorial Ensign",EOE,Edge of Eternities,233,normal,uncommon,1,106779,52498b7b-0389-4e7b-b29f-7ac86aab9229,0.12,false,false,near_mint,en,EUR
-Larval Scoutlander,EOE,Edge of Eternities,194,normal,uncommon,1,107555,d6083f43-58dc-46fc-aeff-347b1080417b,0.16,false,false,near_mint,en,EUR
+Larval Scoutlander,EOE,Edge of Eternities,194,normal,uncommon,2,107555,d6083f43-58dc-46fc-aeff-347b1080417b,0.09,false,false,near_mint,en,EUR
 Dawnstrike Vanguard,EOE,Edge of Eternities,10,normal,uncommon,2,107723,5a041722-9483-469f-9c17-7f0253b0db50,0.13,false,false,near_mint,en,EUR
 Thrumming Hivepool,EOE,Edge of Eternities,247,normal,rare,1,107079,85caf659-7b43-462e-a342-34703d46eb57,3.99,false,false,near_mint,en,EUR
 Susurian Voidborn,EOE,Edge of Eternities,118,normal,uncommon,2,107765,beb97e7b-0ae7-4b08-9ceb-6a7f825bcd49,0.2,false,false,near_mint,en,EUR
@@ -5444,15 +5443,15 @@ Mechan Shieldmate,EOE,Edge of Eternities,65,normal,common,2,107736,745b2119-4d9f
 Voidforged Titan,EOE,Edge of Eternities,125,normal,uncommon,1,107034,6119c016-01b2-44f3-9550-6988324c1d1f,0.15,false,false,near_mint,en,EUR
 Fell Gravship,EOE,Edge of Eternities,101,normal,uncommon,1,107348,e94b130d-3547-43c5-a319-5ebc571c2e2d,0.14,false,false,near_mint,en,EUR
 Hymn of the Faller,EOE,Edge of Eternities,107,foil,uncommon,1,107568,e468d528-6cf0-4563-9da2-e388ba56cb9d,0.39,false,false,near_mint,en,EUR
-Blade of the Swarm,EOE,Edge of Eternities,90,normal,uncommon,1,107604,b157330a-2652-4ed9-b8fa-8e72b4eda15c,0.1,false,false,near_mint,en,EUR
-Dark Endurance,EOE,Edge of Eternities,93,foil,common,1,107790,fac87b49-a0cd-42d5-b30a-efc6d5526fc3,0.16,false,false,near_mint,en,EUR
+Blade of the Swarm,EOE,Edge of Eternities,90,normal,uncommon,2,107604,b157330a-2652-4ed9-b8fa-8e72b4eda15c,0.06,false,false,near_mint,en,EUR
+Dark Endurance,EOE,Edge of Eternities,93,foil,common,2,107790,fac87b49-a0cd-42d5-b30a-efc6d5526fc3,0.09,false,false,near_mint,en,EUR
 Oreplate Pangolin,EOE,Edge of Eternities,150,normal,common,2,107747,90209957-95db-4b59-979a-316d14ef876c,0.09,false,false,near_mint,en,EUR
 Kav Landseeker,EOE,Edge of Eternities,138,normal,common,1,107065,7a5a7e89-50e3-43cb-af93-d7d80a630c11,0.08,false,false,near_mint,en,EUR
 Kavaron Skywarden,EOE,Edge of Eternities,140,normal,common,1,107726,617038a8-0544-4d0e-8ff1-c786e60ecd59,0.09,false,false,near_mint,en,EUR
 Zookeeper Mechan,EOE,Edge of Eternities,170,normal,common,2,107744,8d5cd0be-4337-4aba-a4f6-5adab7735a73,0.08,false,false,near_mint,en,EUR
 Systems Override,EOE,Edge of Eternities,161,normal,uncommon,1,106980,2a34c71b-8d3c-435b-9cf8-4902f997d10d,0.14,false,false,near_mint,en,EUR
 Drill Too Deep,EOE,Edge of Eternities,133,normal,common,2,107760,b9d3b6e8-47c8-49e3-b204-8b659e127bde,0.05,false,false,near_mint,en,EUR
-Galactic Wayfarer,EOE,Edge of Eternities,185,normal,common,2,107078,85b898d2-050f-49a2-87af-07d54d105336,0.11,false,false,near_mint,en,EUR
+Galactic Wayfarer,EOE,Edge of Eternities,185,normal,common,3,107078,85b898d2-050f-49a2-87af-07d54d105336,0.08,false,false,near_mint,en,EUR
 Forest,EOE,Edge of Eternities,275,normal,common,1,107213,fb62605c-a58e-4e53-8336-b2bee316b5a6,0.11,false,false,near_mint,en,EUR
 Plains,EOE,Edge of Eternities,267,normal,common,1,107188,df31f72c-076e-4d8e-9975-6d6281ab71f6,0.12,false,false,near_mint,en,EUR
 Plains,EOE,Edge of Eternities,268,foil,common,1,107115,a26fd28e-d053-48b3-ab4c-2dc6fd33fa64,0.3,false,false,near_mint,en,EUR
@@ -5471,23 +5470,23 @@ Kavaron Harrier,EOE,Edge of Eternities,139,normal,uncommon,1,107383,1da2a740-e4f
 Banishing Light,EOE,Edge of Eternities,6,normal,common,1,107153,c45f11cd-a0aa-4d14-aa21-57f0969f3e2b,0.07,false,false,near_mint,en,EUR
 Melded Moxite,EOE,Edge of Eternities,143,normal,common,4,107421,474c067f-eb24-4ae8-b4c0-f6f8e24cdb2a,0.12,false,false,near_mint,en,EUR
 Dubious Delicacy,EOE,Edge of Eternities,96,normal,uncommon,1,107377,153265b4-0ca4-4245-9226-dd1a083ec91c,0.15,false,false,near_mint,en,EUR
-Gravblade Heavy,EOE,Edge of Eternities,102,normal,common,3,107756,b3872341-d711-407b-85e4-46ccb99988e1,0.05,false,false,near_mint,en,EUR
+Gravblade Heavy,EOE,Edge of Eternities,102,normal,common,4,107756,b3872341-d711-407b-85e4-46ccb99988e1,0.04,false,false,near_mint,en,EUR
 Thaumaton Torpedo,EOE,Edge of Eternities,246,normal,common,3,107695,1817f1b5-960a-435c-bdec-8cc8cbcb3358,0.08,false,false,near_mint,en,EUR
-Sami's Curiosity,EOE,Edge of Eternities,203,normal,common,1,107460,703ad0f3-bd05-42b0-85fb-0cd37807dc91,0.16,false,false,near_mint,en,EUR
+Sami's Curiosity,EOE,Edge of Eternities,203,normal,common,2,107460,703ad0f3-bd05-42b0-85fb-0cd37807dc91,0.09,false,false,near_mint,en,EUR
 Decode Transmissions,EOE,Edge of Eternities,94,normal,common,2,107166,cecb4936-14ca-49f9-b209-6519cab54b30,0.07,false,false,near_mint,en,EUR
 "Dawnsire, Sunstar Dreadnought",EOE,Edge of Eternities,238,normal,mythic,1,107035,6133355c-3dcf-466a-b771-fe6c44d4fa4d,2.85,false,false,near_mint,en,EUR
 Meltstrider Eulogist,EOE,Edge of Eternities,197,foil,uncommon,1,107563,df61aa0c-effc-4d57-be19-876a82c41d33,0.23,false,false,near_mint,en,EUR
 Embrace Oblivion,EOE,Edge of Eternities,98,normal,common,1,106927,3754fc20-7aaa-437d-97df-d6cf1c29586c,0.15,false,false,near_mint,en,EUR
-Orbital Plunge,EOE,Edge of Eternities,149,normal,common,5,107703,2dc7cc17-5319-4694-99c6-8c56a0b40a44,0.1,false,false,near_mint,en,EUR
+Orbital Plunge,EOE,Edge of Eternities,149,normal,common,7,107703,2dc7cc17-5319-4694-99c6-8c56a0b40a44,0.08,false,false,near_mint,en,EUR
 Uthros Psionicist,EOE,Edge of Eternities,84,normal,uncommon,3,107566,e23cc5fd-afe4-480c-8858-ed80a082584e,0.14,false,false,near_mint,en,EUR
-Slagdrill Scrapper,EOE,Edge of Eternities,160,normal,common,4,107694,155dcf54-8fdb-4715-97dc-4eb5d3d80d78,0.12,false,false,near_mint,en,EUR
+Slagdrill Scrapper,EOE,Edge of Eternities,160,normal,common,5,107694,155dcf54-8fdb-4715-97dc-4eb5d3d80d78,0.1,false,false,near_mint,en,EUR
 Wurmwall Sweeper,EOE,Edge of Eternities,249,normal,common,3,107105,9ace282a-5901-4d36-ad21-17eb88bc5138,0.08,false,false,near_mint,en,EUR
 Zealous Display,EOE,Edge of Eternities,45,normal,common,3,107787,f5973fd3-d6bc-48f1-8a44-57d2a6dda228,0.09,false,false,near_mint,en,EUR
 Nanoform Sentinel,EOE,Edge of Eternities,71,normal,common,4,107711,3eeae8c3-7939-4c79-92f0-fbdb9c1b71d3,0.1,false,false,near_mint,en,EUR
-Sunstar Lightsmith,EOE,Edge of Eternities,42,normal,uncommon,2,107725,5f60b09d-9814-4a36-a57d-59b0e04c1c2f,0.15,false,false,near_mint,en,EUR
-Squire's Lightblade,EOE,Edge of Eternities,36,normal,common,2,107699,2a0accba-85d4-4aa4-a70c-80fcce48c261,0.1,false,false,near_mint,en,EUR
+Sunstar Lightsmith,EOE,Edge of Eternities,42,normal,uncommon,3,107725,5f60b09d-9814-4a36-a57d-59b0e04c1c2f,0.11,false,false,near_mint,en,EUR
+Squire's Lightblade,EOE,Edge of Eternities,36,normal,common,3,107699,2a0accba-85d4-4aa4-a70c-80fcce48c261,0.07,false,false,near_mint,en,EUR
 Flight-Deck Coordinator,EOE,Edge of Eternities,17,normal,common,5,107743,88cc6328-a035-4f74-b786-390e5c7c324c,0.04,false,false,near_mint,en,EUR
-Harmonious Grovestrider,EOE,Edge of Eternities,189,normal,uncommon,3,106789,e320abed-f145-42d3-b402-4f82e3a56389,0.14,false,false,near_mint,en,EUR
+Harmonious Grovestrider,EOE,Edge of Eternities,189,normal,uncommon,4,106789,e320abed-f145-42d3-b402-4f82e3a56389,0.11,false,false,near_mint,en,EUR
 Perigee Beckoner,EOE,Edge of Eternities,112,normal,common,3,107786,f3666a08-d449-496f-969a-bf21d4afbd77,0.13,false,false,near_mint,en,EUR
 Knight Luminary,EOE,Edge of Eternities,23,normal,common,3,107708,34334971-c1b7-4506-a6dd-77f66b3ae4e7,0.1,false,false,near_mint,en,EUR
 Bygone Colossus,EOE,Edge of Eternities,235,normal,uncommon,2,107016,4bb8f2ef-4398-4a07-9130-5005356a3b4a,0.16,false,false,near_mint,en,EUR
@@ -5497,7 +5496,7 @@ Germinating Wurm,EOE,Edge of Eternities,187,normal,common,5,107792,fcde173a-6314
 Swarm Culler,EOE,Edge of Eternities,119,normal,common,4,107700,2a8f583c-88b6-4797-b93e-3086845fc326,0.07,false,false,near_mint,en,EUR
 Monoist Circuit-Feeder,EOE,Edge of Eternities,110,normal,uncommon,3,107492,957ae7aa-98d6-402a-9b20-e3e5b7e8dfe3,0.14,false,false,near_mint,en,EUR
 Mechanozoa,EOE,Edge of Eternities,66,normal,common,4,106948,0cb8d8ce-329a-4a97-b3d8-796703ebcb37,0.14,false,false,near_mint,en,EUR
-Illvoi Operative,EOE,Edge of Eternities,61,normal,common,4,107773,d0ae9fc7-1802-4806-9996-1f1f458ff6a7,0.1,false,false,near_mint,en,EUR
+Illvoi Operative,EOE,Edge of Eternities,61,normal,common,5,107773,d0ae9fc7-1802-4806-9996-1f1f458ff6a7,0.08,false,false,near_mint,en,EUR
 Frontline War-Rager,EOE,Edge of Eternities,134,normal,common,4,107789,fa232943-818b-4944-be60-2d80c806bf62,0.05,false,false,near_mint,en,EUR
 Luxknight Breacher,EOE,Edge of Eternities,26,normal,common,3,107537,c1236731-0d33-4705-8077-3cf58acf9a39,0.15,false,false,near_mint,en,EUR
 Fungal Colossus,EOE,Edge of Eternities,184,normal,common,3,107502,9dc9559f-cece-4c85-807c-158291666007,0.08,false,false,near_mint,en,EUR
@@ -5508,8 +5507,8 @@ Illvoi Infiltrator,EOE,Edge of Eternities,59,normal,uncommon,2,107702,2db4ed41-0
 Selfcraft Mechan,EOE,Edge of Eternities,74,normal,common,2,107724,5b2de056-5c27-44d6-871d-909411bd52dd,0.08,false,false,near_mint,en,EUR
 Cryogen Relic,EOE,Edge of Eternities,52,normal,common,1,107466,7bfb33b6-e2bf-498f-8c58-ae21a840cf75,0.59,false,false,near_mint,en,EUR
 Radiant Strike,EOE,Edge of Eternities,29,normal,common,3,107484,8c38e4cb-918b-4493-872b-66c90dcfd339,0.14,false,false,near_mint,en,EUR
-Dockworker Drone,EOE,Edge of Eternities,11,normal,common,3,107784,eeff069f-427b-42ad-afb1-36f0e547fb74,0.1,false,false,near_mint,en,EUR
-Virus Beetle,EOE,Edge of Eternities,124,normal,common,2,107570,e96c986c-684c-4546-a9c9-b6b903bda101,0.1,false,false,near_mint,en,EUR
+Dockworker Drone,EOE,Edge of Eternities,11,normal,common,4,107784,eeff069f-427b-42ad-afb1-36f0e547fb74,0.08,false,false,near_mint,en,EUR
+Virus Beetle,EOE,Edge of Eternities,124,normal,common,4,107570,e96c986c-684c-4546-a9c9-b6b903bda101,0.06,false,false,near_mint,en,EUR
 Vaultguard Trooper,EOE,Edge of Eternities,166,normal,uncommon,2,107709,36afe3b1-43a2-47b4-bc0a-24efb1e2e5a0,0.14,false,false,near_mint,en,EUR
 Pain for All,EOE,Edge of Eternities,337,foil,rare,1,107251,2a9e9951-7ded-41de-808f-8a0fea964307,2.29,false,false,near_mint,en,EUR
 Gravkill,EOE,Edge of Eternities,103,normal,common,3,107333,cfa6c57f-a193-48cc-9764-d8348548a111,0.09,false,false,near_mint,en,EUR
@@ -5528,10 +5527,10 @@ Bonders' Enclave,EOS,Edge of Eternities: Stellar Sights,4,normal,rare,1,107222,0
 "Evendo, Waking Haven",EOE,Edge of Eternities,253,normal,mythic,1,107398,2fa09104-acbe-4410-b101-2fe6ac28efde,14.3,false,false,near_mint,en,EUR
 Specimen Freighter,EOE,Edge of Eternities,76,normal,uncommon,2,107526,b862a9f8-2361-4220-99bd-ae2530905195,0.11,false,false,near_mint,en,EUR
 Memorial Team Leader,EOE,Edge of Eternities,144,normal,uncommon,1,107413,3ddc240a-62df-4773-98d7-48a9adaf1846,0.11,false,false,near_mint,en,EUR
-Rig for War,EOE,Edge of Eternities,156,normal,common,2,107710,3edd0515-dcc4-4cb5-8b54-9c00173d8a6d,0.05,false,false,near_mint,en,EUR
+Rig for War,EOE,Edge of Eternities,156,normal,common,3,107710,3edd0515-dcc4-4cb5-8b54-9c00173d8a6d,0.04,false,false,near_mint,en,EUR
 Remnant Elemental,EOE,Edge of Eternities,155,normal,uncommon,1,107475,830d5532-3b24-470e-912f-f0f5df1cb530,0.05,false,false,near_mint,en,EUR
 Terminal Velocity,EOE,Edge of Eternities,163,normal,rare,1,107696,1d18dc06-16f0-4a3b-8d52-dbf4aa2c393d,0.02,false,false,near_mint,en,EUR
-Galvanizing Sawship,EOE,Edge of Eternities,136,normal,uncommon,1,107273,5bbce9fb-401f-4e78-acd5-9d3b506687fd,0.02,false,false,near_mint,en,EUR
+Galvanizing Sawship,EOE,Edge of Eternities,136,normal,uncommon,2,107273,5bbce9fb-401f-4e78-acd5-9d3b506687fd,0.02,false,false,near_mint,en,EUR
 Nebula Dragon,EOE,Edge of Eternities,147,normal,common,1,107692,0ee509dd-9fba-4b6d-a9d4-cc8bf5822ddd,0.09,false,false,near_mint,en,EUR
 Invasive Maneuvers,EOE,Edge of Eternities,137,normal,uncommon,1,107524,b68010e2-7810-43cb-a52e-e73b1834e54e,0.14,false,false,near_mint,en,EUR
 Weapons Manufacturing,EOE,Edge of Eternities,168,normal,rare,1,107111,a058f1a6-318c-4bba-981e-ace079ada806,2.14,false,false,near_mint,en,EUR
@@ -5540,14 +5539,14 @@ Tragic Trajectory,EOE,Edge of Eternities,122,normal,uncommon,1,107063,78c8bc60-1
 Beamsaw Prospector,EOE,Edge of Eternities,89,normal,common,1,107734,6f717a3f-c6db-4e8d-8b62-6361ab33d000,0.12,false,false,near_mint,en,EUR
 Timeline Culler,EOE,Edge of Eternities,121,normal,uncommon,1,106991,33410410-72f2-49c4-9e63-a72202cd075a,0.36,false,false,near_mint,en,EUR
 Faller's Faithful,EOE,Edge of Eternities,100,normal,uncommon,2,107607,cbb1b46f-72e0-4c2f-8012-74529bd29a0d,0.16,false,false,near_mint,en,EUR
-Depressurize,EOE,Edge of Eternities,95,normal,common,1,107697,25520d5a-1a83-42cc-8ace-8b1156019d64,0.1,false,false,near_mint,en,EUR
+Depressurize,EOE,Edge of Eternities,95,normal,common,2,107697,25520d5a-1a83-42cc-8ace-8b1156019d64,0.06,false,false,near_mint,en,EUR
 Hymn of the Faller,EOE,Edge of Eternities,107,normal,uncommon,1,107568,e468d528-6cf0-4563-9da2-e388ba56cb9d,0.22,false,false,near_mint,en,EUR
 Meltstrider Eulogist,EOE,Edge of Eternities,197,normal,uncommon,1,107563,df61aa0c-effc-4d57-be19-876a82c41d33,0.12,false,false,near_mint,en,EUR
 Gene Pollinator,EOE,Edge of Eternities,186,normal,common,2,107772,ce7a8eec-a029-4ee1-b2d6-405d903d4640,0.08,false,false,near_mint,en,EUR
 Icecave Crasher,EOE,Edge of Eternities,191,normal,common,2,107781,e6c1ed0c-0c0d-47a7-8ebc-67854cb226e0,0.06,false,false,near_mint,en,EUR
 Intrepid Tenderfoot,EOE,Edge of Eternities,193,normal,common,1,107740,809df0ea-deff-47b9-83df-cc1f360d377e,0.05,false,false,near_mint,en,EUR
 Broodguard Elite,EOE,Edge of Eternities,175,normal,uncommon,2,106945,08b1d019-65ab-4dea-9076-041fd6338a35,0.12,false,false,near_mint,en,EUR
-Blooming Stinger,EOE,Edge of Eternities,174,normal,common,2,107705,2ee859bd-d99c-4b1d-9372-7ff4fc1e8c6a,0.07,false,false,near_mint,en,EUR
+Blooming Stinger,EOE,Edge of Eternities,174,normal,common,3,107705,2ee859bd-d99c-4b1d-9372-7ff4fc1e8c6a,0.05,false,false,near_mint,en,EUR
 Drix Fatemaker,EOE,Edge of Eternities,178,normal,common,1,107381,1beb7566-305e-4091-bdc4-cf4c789ac05a,0.12,false,false,near_mint,en,EUR
 Station Monitor,EOE,Edge of Eternities,230,normal,uncommon,1,107529,ba9f6d16-ee3e-4fbb-b78a-6292188eb61f,0.11,false,false,near_mint,en,EUR
 "Sami, Ship's Engineer",EOE,Edge of Eternities,225,foil,uncommon,1,106764,75c38cc9-07de-46d4-8195-f04b2b7e0fee,0.14,false,false,near_mint,en,EUR
@@ -5555,7 +5554,7 @@ Pinnacle Kill-Ship,EOE,Edge of Eternities,244,foil,common,1,107533,bf784de8-5ae2
 Pinnacle Kill-Ship,EOE,Edge of Eternities,244,normal,common,2,107533,bf784de8-5ae2-4c07-92bb-a5b7f593b773,0.09,false,false,near_mint,en,EUR
 "Dyadrine, Synthesis Amalgam",EOE,Edge of Eternities,216,normal,rare,1,107498,994ca692-7138-4dcb-bf46-5da530f86036,0.16,false,false,near_mint,en,EUR
 Biomechan Engineer,EOE,Edge of Eternities,213,normal,uncommon,1,107468,7edcef2c-029c-46bd-bfeb-ff56a57dd63a,0.1,false,false,near_mint,en,EUR
-Chrome Companion,EOE,Edge of Eternities,236,normal,common,1,107088,8ef269a0-1cb9-4901-81e6-43db3ae3756c,0.09,false,false,near_mint,en,EUR
+Chrome Companion,EOE,Edge of Eternities,236,normal,common,2,107088,8ef269a0-1cb9-4901-81e6-43db3ae3756c,0.06,false,false,near_mint,en,EUR
 Synthesizer Labship,EOE,Edge of Eternities,81,normal,rare,2,107585,fba6332c-acba-43f9-877c-ca6c5328aae9,0.11,false,false,near_mint,en,EUR
 Gigastorm Titan,EOE,Edge of Eternities,57,normal,uncommon,1,107603,abc83e0a-0ae5-4087-a751-058a1ba6a920,0.04,false,false,near_mint,en,EUR
 Cerebral Download,EOE,Edge of Eternities,48,normal,uncommon,1,107429,4d3b5d73-694c-4f9a-8b4f-d8d8c58c8d65,0.13,false,false,near_mint,en,EUR
@@ -5564,10 +5563,10 @@ Cloudsculpt Technician,EOE,Edge of Eternities,49,normal,common,2,107718,51077a54
 Starbreach Whale,EOE,Edge of Eternities,77,normal,common,1,107085,8a1a0476-7145-4493-97e5-4fc05c85e476,0.13,false,false,near_mint,en,EUR
 Weftblade Enhancer,EOE,Edge of Eternities,44,normal,common,1,107745,8d72b00c-5043-4630-949a-fc17eeb962bc,0.02,false,false,near_mint,en,EUR
 Lumen-Class Frigate,EOE,Edge of Eternities,25,normal,rare,2,107370,0cc59b5a-65fa-47cc-8ac7-b7c3f533a782,0.17,false,false,near_mint,en,EUR
-Starport Security,EOE,Edge of Eternities,39,normal,common,2,107244,238cb1db-6c41-4fe1-bc34-340048dfde18,0.05,false,false,near_mint,en,EUR
+Starport Security,EOE,Edge of Eternities,39,normal,common,3,107244,238cb1db-6c41-4fe1-bc34-340048dfde18,0.04,false,false,near_mint,en,EUR
 Wedgelight Rammer,EOE,Edge of Eternities,43,normal,uncommon,3,107397,2cb0984f-dc8b-4bb3-a4fd-8d6d4ae20198,0.07,false,false,near_mint,en,EUR
 Focus Fire,EOE,Edge of Eternities,18,normal,common,2,107515,a9ddfcbc-0f84-4315-aaa3-ca54ff64d7de,0.06,false,false,near_mint,en,EUR
-Starfighter Pilot,EOE,Edge of Eternities,38,normal,common,1,106970,1e571246-aadc-4d1f-a284-9a529e150fe0,0.11,false,false,near_mint,en,EUR
+Starfighter Pilot,EOE,Edge of Eternities,38,normal,common,2,106970,1e571246-aadc-4d1f-a284-9a529e150fe0,0.07,false,false,near_mint,en,EUR
 Dual-Sun Adepts,EOE,Edge of Eternities,12,normal,uncommon,1,107771,c7e8c830-77ae-437f-8e28-ce61c5fde6b6,0.08,false,false,near_mint,en,EUR
 Sacred Foundry,EOE,Edge of Eternities,256,normal,rare,1,106767,8b4e2642-3c87-4708-b9b4-2e7f7359ac7d,8.44,false,false,near_mint,en,EUR
 Mana Confluence,EOS,Edge of Eternities: Stellar Sights,25,foil,mythic,1,107117,a374b6ef-bd75-4eae-ac7a-09332b0a653d,39.91,false,false,near_mint,en,EUR
@@ -5811,7 +5810,7 @@ East-Mark Cavalier,LTR,The Lord of the Rings: Tales of Middle-earth,9,normal,com
 Fireball,4ED,Fourth Edition,192,normal,common,1,39995,afe078d7-cdde-44bb-942e-417123ebeccb,0.26,false,false,near_mint,en,EUR
 Dwarven Mine,ELD,Throne of Eldraine,243,normal,common,1,46095,5c83074d-0c9b-4b58-94ca-d75240485579,0.17,false,false,near_mint,en,EUR
 Uncle Istvan,4ED,Fourth Edition,165,normal,uncommon,1,40022,cbf5aa58-f68b-4197-9697-1e6653760853,0.25,false,false,near_mint,en,EUR
-Terrapact Intimidator,EOE,Edge of Eternities,164,normal,uncommon,1,106957,13fe3358-fd68-4245-a2ad-aa9200cf4655,0.11,false,false,near_mint,en,EUR
+Terrapact Intimidator,EOE,Edge of Eternities,164,normal,uncommon,2,106957,13fe3358-fd68-4245-a2ad-aa9200cf4655,0.07,false,false,near_mint,en,EUR
 "Syr Vondam, the Lucent",EOE,Edge of Eternities,232,normal,uncommon,1,107198,ea954205-5ff5-493b-bf30-6212042c2bc9,0.08,false,false,near_mint,en,EUR
 Squire's Lightblade,EOE,Edge of Eternities,36,foil,common,1,107699,2a0accba-85d4-4aa4-a70c-80fcce48c261,0.06,false,false,near_mint,en,EUR
 Lashwhip Predator,EOE,Edge of Eternities,195,normal,uncommon,1,107593,24553e98-29a9-47e3-91c7-9add708d9ad1,0.05,false,false,near_mint,en,EUR
@@ -5820,9 +5819,9 @@ Full Bore,EOE,Edge of Eternities,135,normal,uncommon,1,107549,cfee64ef-d22d-4024
 Virulent Silencer,EOE,Edge of Eternities,248,normal,uncommon,1,107009,4120fcfc-3547-4774-a15d-b9cccac04e76,0.14,false,false,near_mint,en,EUR
 Plains,EOE,Edge of Eternities,262,normal,common,1,106773,089ae01b-e042-4255-b0ee-17d8f416a8d9,0.85,false,false,near_mint,en,EUR
 Oreplate Pangolin,EOE,Edge of Eternities,150,foil,common,1,107747,90209957-95db-4b59-979a-316d14ef876c,0.07,false,false,near_mint,en,EUR
-Rescue Skiff,EOE,Edge of Eternities,32,normal,uncommon,1,107459,6fe86bfb-c67d-4df9-88c9-f083091f4cda,0.08,false,false,near_mint,en,EUR
+Rescue Skiff,EOE,Edge of Eternities,32,normal,uncommon,2,107459,6fe86bfb-c67d-4df9-88c9-f083091f4cda,0.05,false,false,near_mint,en,EUR
 Seedship Agrarian,EOE,Edge of Eternities,204,normal,uncommon,1,107706,2fc7946d-37b0-4dc8-9daa-8d2204d8e4d2,0.09,false,false,near_mint,en,EUR
-"Alpharael, Dreaming Acolyte",EOE,Edge of Eternities,212,normal,uncommon,1,106884,349a2211-2b23-418d-a1ef-1c72ad2e171d,0.07,false,false,near_mint,en,EUR
+"Alpharael, Dreaming Acolyte",EOE,Edge of Eternities,212,normal,uncommon,2,106884,349a2211-2b23-418d-a1ef-1c72ad2e171d,0.05,false,false,near_mint,en,EUR
 "Venser, Shaper Savant",J25,Foundations Jumpstart,66,normal,rare,1,100582,61c1b191-e471-479b-96a8-6d0325965767,0.63,false,false,near_mint,en,EUR
 Starlight Snare,J25,Foundations Jumpstart,9,normal,common,1,100743,80ab3040-fec2-4a65-8825-e6a1132601d1,0.11,false,false,near_mint,en,EUR
 Breaching Hippocamp,J25,Foundations Jumpstart,290,normal,common,1,101325,f0a04c32-2611-4fa3-928b-544129e06eb8,0.16,false,false,near_mint,en,EUR
@@ -6205,7 +6204,7 @@ Swamp,BFZ,Battle for Zendikar,264,normal,common,1,10073,1c590ebb-1e3a-4861-b8f2-
 Eldrazi Scion,TOGW,Oath of the Gatewatch Tokens,1,normal,common,1,9195,a03edf14-3495-4f61-ad73-f16e9456472c,0.13,false,false,near_mint,en,EUR
 Thought-Stalker Warlock,BLB,Bloomburrow,118,normal,uncommon,1,96018,42e80284-d489-493b-ae92-95b742d07cb3,0.24,false,false,near_mint,en,EUR
 Hazardroot Herbalist,BLB,Bloomburrow,174,normal,uncommon,1,96130,e2882982-b3a3-4762-a550-6b82db1038e8,0.08,false,false,near_mint,en,EUR
-Plumecreed Mentor,BLB,Bloomburrow,228,normal,uncommon,1,95819,b1aa988f-547e-449a-9f1a-296c01d68d96,0.13,false,false,near_mint,en,EUR
+Plumecreed Mentor,BLB,Bloomburrow,228,normal,uncommon,2,95819,b1aa988f-547e-449a-9f1a-296c01d68d96,0.07,false,false,near_mint,en,EUR
 Tangle Tumbler,BLB,Bloomburrow,250,normal,uncommon,1,96010,258ef349-5042-4992-bae9-9f8f54b55db0,0.02,false,false,near_mint,en,EUR
 Stormchaser's Talent,BLB,Bloomburrow,75,normal,rare,1,96092,a36e682d-b43d-4e08-bf5b-70d7e924dbe5,6.59,false,false,near_mint,en,EUR
 Island,BLB,Bloomburrow,266,normal,common,1,95743,106a5332-0104-4ec9-9e1f-806381ae4cad,0.16,false,false,near_mint,en,EUR
@@ -6242,8 +6241,8 @@ Thraben Exorcism,MID,Innistrad: Midnight Hunt,39,normal,common,1,63372,a0700298-
 Bounding Wolf,MID,Innistrad: Midnight Hunt,170,normal,common,1,63307,74e22ed6-9d39-4feb-8c64-64cdd8313816,0.03,false,false,near_mint,pt,EUR
 Bellowing Crier,BLB,Bloomburrow,42,normal,common,1,96119,ca2215dd-6300-49cf-b9b2-3a840b786c31,0.06,false,false,near_mint,en,EUR
 Roughshod Duo,BLB,Bloomburrow,150,normal,common,1,96343,78cdcfb9-a247-4c2d-a098-5b57570f8cd5,0.04,false,false,near_mint,en,EUR
-Corpseberry Cultivator,BLB,Bloomburrow,210,normal,common,1,95829,c911a759-ed7b-452b-88a3-663478357610,0.02,false,false,near_mint,en,EUR
-Polliwallop,BLB,Bloomburrow,189,normal,common,1,95935,6bc4963c-d90b-4588-bdb7-85956e42a623,0.06,false,false,near_mint,en,EUR
+Corpseberry Cultivator,BLB,Bloomburrow,210,normal,common,2,95829,c911a759-ed7b-452b-88a3-663478357610,0.02,false,false,near_mint,en,EUR
+Polliwallop,BLB,Bloomburrow,189,normal,common,2,95935,6bc4963c-d90b-4588-bdb7-85956e42a623,0.04,false,false,near_mint,en,EUR
 Intrepid Rabbit,BLB,Bloomburrow,17,normal,common,1,96276,4d70b99d-c8bf-4a56-8957-cf587fe60b81,0.02,false,false,near_mint,en,EUR
 Lightshell Duo,BLB,Bloomburrow,56,normal,common,1,95905,2f00c834-b4a9-45b8-bb3f-22c2a42314a0,0.03,false,false,near_mint,en,EUR
 Early Winter,BLB,Bloomburrow,93,normal,common,1,95626,5030e6ac-211d-4145-8c87-998a8351a467,0.04,false,false,near_mint,en,EUR
@@ -6379,7 +6378,6 @@ Firebending Lesson,TLA,Avatar: The Last Airbender,138,normal,common,5,109926,fa9
 "Ty Lee, Artful Acrobat",TLA,Avatar: The Last Airbender,158,normal,uncommon,1,109561,dcd9df24-272b-4aa1-b05f-6ee6b3d3dfe7,,false,false,near_mint,en,EUR
 Cunning Maneuver,TLA,Avatar: The Last Airbender,130,normal,common,3,109380,0ff7c993-ba29-43b0-9639-7c4bc0292fa2,0.02,false,false,near_mint,en,EUR
 The Last Agni Kai,TLA,Avatar: The Last Airbender,144,normal,rare,1,109446,61eaebc6-7575-48ed-b212-ff8b0c7ae694,,false,false,near_mint,en,EUR
-Water Tribe Rallier,TLA,Avatar: The Last Airbender,42,normal,uncommon,1,109430,4e744b6c-1c2f-451a-818a-5ee7785b5213,,false,false,near_mint,en,EUR
 Invasion Reinforcements,TLA,Avatar: The Last Airbender,24,foil,uncommon,1,109783,b8845bba-d116-43cd-8ae0-e553f3324d66,,false,false,near_mint,en,EUR
 Path to Redemption,TLA,Avatar: The Last Airbender,31,normal,common,4,108310,f936d64a-0db4-49c1-8a57-6d99e012a555,0.02,false,false,near_mint,en,EUR
 Avatar Enthusiasts,TLA,Avatar: The Last Airbender,11,normal,common,1,108124,7292e5f2-d5a1-4e39-8f75-eba471819f04,,false,false,near_mint,en,EUR
@@ -6556,7 +6554,6 @@ Roku's Mastery,TLE,Avatar: The Last Airbender Eternal,243,normal,uncommon,1,1082
 Thriving Bluff,BLC,Bloomburrow Commander,346,normal,common,1,96539,fe1789e8-fc45-45f5-8d98-1efce606efc4,0.02,false,false,near_mint,en,EUR
 "Ardyn, the Usurper",FIN,Final Fantasy,524,foil,rare,1,105588,34bd7a66-afb1-4a6b-80b3-fce1bb361d88,9.44,false,false,near_mint,en,EUR
 Aang's Iceberg,TLA,Avatar: The Last Airbender,336,normal,rare,1,108121,6cd25a10-1e4e-4f47-8a67-221df4907b26,0.3,false,false,near_mint,en,EUR
-The Blue Spirit,TLE,Avatar: The Last Airbender Eternal,90,foil,rare,1,109800,d0d1f5b0-f842-40d5-ae51-015eefe68fa1,2.49,false,false,near_mint,en,EUR
 Fabled Passage,TLE,Avatar: The Last Airbender Eternal,57,normal,mythic,1,109775,b10e1e95-414b-446a-bc36-56f116abfa78,3.8,false,false,near_mint,en,EUR
 Diligent Zookeeper,TLA,Avatar: The Last Airbender,327,foil,rare,1,109445,5f7e8f5d-c9d6-4f25-af92-f1a6b815f0c1,0.3,false,false,near_mint,en,EUR
 Planetarium of Wan Shi Tong,TLA,Avatar: The Last Airbender,259,foil,mythic,1,109377,0ebaf0bf-7aa2-469d-bdbb-0fbf6741eede,6.75,false,false,near_mint,en,EUR
@@ -6586,7 +6583,7 @@ Of One Mind,IKO,Ikoria: Lair of Behemoths,60,normal,common,3,50017,c95fb136-f21d
 Ninja of the Deep Hours,BOK,Betrayers of Kamigawa,44,normal,common,4,28665,367a67c7-54db-4336-b55a-3fa27625172a,0.05,false,false,near_mint,en,EUR
 Spellstutter Sprite,MMA,Modern Masters,65,normal,common,3,16244,3899605d-2203-4ab6-9ff5-69490382eea4,2.5,false,false,near_mint,en,EUR
 Faerie Miscreant,ORI,Magic Origins,57,normal,common,4,10885,1c487f1a-a51d-449c-827d-c7b9381acb34,0.02,false,false,near_mint,en,EUR
-Annul,EOE,Edge of Eternities,46,normal,uncommon,2,107271,4feeebea-aa55-4599-ab5a-4e41a54d0dfd,0.02,false,false,near_mint,en,EUR
+Annul,EOE,Edge of Eternities,46,normal,uncommon,3,107271,4feeebea-aa55-4599-ab5a-4e41a54d0dfd,0.02,false,false,near_mint,en,EUR
 Counterspell,CMM,Commander Masters,630,normal,common,3,84538,7e47212d-399e-4121-92d4-9fb0d85767cb,1.4,false,false,near_mint,en,EUR
 Retrofitted Transmogrant,MH3,Modern Horizons 3,106,normal,common,1,94839,12c1b83d-710b-4680-855a-02ba1f72abf0,0.02,false,false,near_mint,en,EUR
 Nightshade Dryad,MH3,Modern Horizons 3,163,normal,common,1,94864,71f9252d-241f-45ea-9d80-663150963b59,0.02,false,false,near_mint,en,EUR
@@ -6692,7 +6689,6 @@ Pyrrhic Strike,ECL,Lorwyn Eclipsed,30,normal,uncommon,2,110626,cce5b16d-07fb-4e6
 Scarblade's Malice,ECL,Lorwyn Eclipsed,119,normal,common,2,110815,aea9b5c0-3b32-44be-9773-566b9daafa6b,,false,false,near_mint,en,EUR
 Puca's Eye,ECL,Lorwyn Eclipsed,259,foil,uncommon,1,110835,c3a5ca02-3829-4c42-b0dc-98b660f8a8f0,,false,false,near_mint,en,EUR
 Foraging Wickermaw,ECL,Lorwyn Eclipsed,256,normal,common,3,110867,f524bc08-caeb-4362-b960-eb8e0e4159d0,0.02,false,false,near_mint,en,EUR
-Hexing Squelcher,ECL,Lorwyn Eclipsed,145,normal,rare,1,110354,674960ce-ff33-4d5e-a24a-a4582b2e9809,,false,false,near_mint,en,EUR
 Lys Alana Informant,ECL,Lorwyn Eclipsed,181,normal,common,3,110386,a79649c4-559e-4306-a102-5fd8750629c7,0.02,false,false,near_mint,en,EUR
 Reluctant Dounguard,ECL,Lorwyn Eclipsed,31,normal,common,4,110849,dbce93c0-5efc-4b60-9cef-9d9b374d397b,0.02,false,false,near_mint,en,EUR
 Heirloom Auntie,ECL,Lorwyn Eclipsed,107,normal,common,3,110623,cac251b2-d2cc-45b6-9ca8-678e0eab56ea,0.02,false,false,near_mint,en,EUR
@@ -6974,7 +6970,7 @@ Death in the Family,TMT,Teenage Mutant Ninja Turtles,61,normal,uncommon,2,111559
 "Jennika, Bad Apple Big Sister",TMT,Teenage Mutant Ninja Turtles,203,normal,common,1,111472,64c6cf57-bc43-4b36-a01c-f4b2fadc8ce2,0.2,false,false,near_mint,en,EUR
 Mondo Gecko,TMT,Teenage Mutant Ninja Turtles,231,normal,mythic,1,111171,018e9fd1-3e7f-4909-bab1-3edb9c9e4326,3.92,false,false,near_mint,en,EUR
 Foot Ninjas,TMT,Teenage Mutant Ninja Turtles,209,normal,common,3,111544,fa84045f-f14a-42fc-ba07-9674239b3587,0.06,false,false,near_mint,en,EUR
-Tunnel Rats,TMT,Teenage Mutant Ninja Turtles,84,normal,common,4,111582,70faf7d8-008a-454a-a21b-702aa661b8f9,0.02,false,false,near_mint,en,EUR
+Tunnel Rats,TMT,Teenage Mutant Ninja Turtles,84,normal,common,5,111582,70faf7d8-008a-454a-a21b-702aa661b8f9,0.02,false,false,near_mint,en,EUR
 Foot Elite,TMT,Teenage Mutant Ninja Turtles,146,normal,common,1,111198,24bd571e-652a-4e7c-afc6-a45f0ccf62f6,0.02,false,false,near_mint,en,EUR
 Putrid Pals,TMT,Teenage Mutant Ninja Turtles,165,normal,common,1,111567,42cdb88d-675a-43bb-b85c-51c4cc526315,0.02,false,false,near_mint,en,EUR
 Slithering Cryptid,TMT,Teenage Mutant Ninja Turtles,168,normal,common,1,111476,6d35cb39-8832-4cf1-be73-8de49fbea529,0.02,false,false,near_mint,en,EUR
@@ -6985,15 +6981,15 @@ Lessons from Life,TMT,Teenage Mutant Ninja Turtles,155,normal,uncommon,3,111182,
 Ice Cream Kitty,TMT,Teenage Mutant Ninja Turtles,150,normal,common,2,111579,66081fd3-2457-4602-96c4-3075ddfec1c2,0.02,false,false,near_mint,en,EUR
 "Karai, Future of the Foot",TMT,Teenage Mutant Ninja Turtles,151,normal,uncommon,1,111180,0dded2d4-1640-4431-809e-403b51b27db6,0.09,false,false,near_mint,en,EUR
 Nobody,TMT,Teenage Mutant Ninja Turtles,161,foil,common,1,111553,0966b8ff-61d3-4394-a357-97c35f042a29,0.06,false,false,near_mint,en,EUR
-Mouser Mark III,TMT,Teenage Mutant Ninja Turtles,159,normal,common,2,111469,608a13b4-0b94-4be5-ac4b-e939901e8419,0.02,false,false,near_mint,en,EUR
-Retro-Mutation,TMT,Teenage Mutant Ninja Turtles,51,normal,common,3,111571,4af284ba-fa54-43c5-8c76-3e1128957452,0.02,false,false,near_mint,en,EUR
-Sewer-veillance Cam,TMT,Teenage Mutant Ninja Turtles,53,normal,common,2,111505,ab47a37b-b66d-4f70-9bf0-4d5ed6b518f3,0.03,false,false,near_mint,en,EUR
+Mouser Mark III,TMT,Teenage Mutant Ninja Turtles,159,normal,common,3,111469,608a13b4-0b94-4be5-ac4b-e939901e8419,0.02,false,false,near_mint,en,EUR
+Retro-Mutation,TMT,Teenage Mutant Ninja Turtles,51,normal,common,4,111571,4af284ba-fa54-43c5-8c76-3e1128957452,0.02,false,false,near_mint,en,EUR
+Sewer-veillance Cam,TMT,Teenage Mutant Ninja Turtles,53,normal,common,3,111505,ab47a37b-b66d-4f70-9bf0-4d5ed6b518f3,0.02,false,false,near_mint,en,EUR
 Metalhead,TMT,Teenage Mutant Ninja Turtles,44,normal,uncommon,1,111563,3c2d8b09-8694-45ab-be01-f8dc17378cf0,0.09,false,false,near_mint,en,EUR
 Buzz Bots,TMT,Teenage Mutant Ninja Turtles,32,normal,common,3,111484,7c375190-f81b-4ab1-a1b6-fe432796821f,0.02,false,false,near_mint,en,EUR
 Utrom Scientists,TMT,Teenage Mutant Ninja Turtles,56,normal,common,2,111478,6da89625-5278-49d4-813b-a1a631f114f5,0.02,false,false,near_mint,en,EUR
-Purple Dragon Punks,TMT,Teenage Mutant Ninja Turtles,100,normal,common,2,111596,bbe1d7e5-68e2-4458-aa3f-5e97fa8e7cae,0.02,false,false,near_mint,en,EUR
+Purple Dragon Punks,TMT,Teenage Mutant Ninja Turtles,100,normal,common,3,111596,bbe1d7e5-68e2-4458-aa3f-5e97fa8e7cae,0.02,false,false,near_mint,en,EUR
 "Zog, Triceraton Castaway",TMT,Teenage Mutant Ninja Turtles,111,normal,common,2,111502,a83a70ba-448e-45f3-b23b-6f38af54811f,0.02,false,false,near_mint,en,EUR
-Mouser Attack!,TMT,Teenage Mutant Ninja Turtles,95,normal,common,1,111437,058490f4-0ada-45e6-b4f0-e433537f52d6,0.02,false,false,near_mint,en,EUR
+Mouser Attack!,TMT,Teenage Mutant Ninja Turtles,95,normal,common,2,111437,058490f4-0ada-45e6-b4f0-e433537f52d6,0.02,false,false,near_mint,en,EUR
 "Slash, Reptile Rampager",TMT,Teenage Mutant Ninja Turtles,108,foil,rare,1,110902,025aafbc-5b24-4f5b-9b4a-81f6b9cb5ef3,3.0,false,false,near_mint,en,EUR
 Jennika's Technique,TMT,Teenage Mutant Ninja Turtles,93,normal,uncommon,4,111528,df559199-c8b9-455b-aa07-0a042348de96,0.06,false,false,near_mint,en,EUR
 "Raphael, Tough Turtle",TMT,Teenage Mutant Ninja Turtles,104,normal,common,4,111390,f24c90c8-ed04-4b4e-8b19-c7d07a90c6b8,0.02,false,false,near_mint,en,EUR
@@ -7001,7 +6997,7 @@ Manhole Missile,TMT,Teenage Mutant Ninja Turtles,94,normal,common,1,111444,243e3
 Rock Soldiers,TMT,Teenage Mutant Ninja Turtles,107,normal,common,3,111554,0fada65d-fd8d-4be9-b2bb-ea5cac78fdd7,0.02,false,false,near_mint,en,EUR
 The Last Ronin's Technique,TMT,Teenage Mutant Ninja Turtles,12,normal,uncommon,1,111374,dfb18239-d373-4795-8598-c82abae2cb62,0.09,false,false,near_mint,en,EUR
 Uneasy Alliance,TMT,Teenage Mutant Ninja Turtles,28,normal,common,3,111575,5d9a4f9a-1e3a-4de8-a7c0-7158c6703b4e,0.02,false,false,near_mint,en,EUR
-"Jennika, Bad Apple Big Sister",TMT,Teenage Mutant Ninja Turtles,10,normal,common,3,111501,a5b83101-e3ef-4ffe-a886-4fc2b57a0947,0.02,false,false,near_mint,en,EUR
+"Jennika, Bad Apple Big Sister",TMT,Teenage Mutant Ninja Turtles,10,normal,common,4,111501,a5b83101-e3ef-4ffe-a886-4fc2b57a0947,0.02,false,false,near_mint,en,EUR
 Featherbrained Filcher,TMT,Teenage Mutant Ninja Turtles,6,normal,uncommon,2,111481,78c55706-4d00-4b97-965c-0b2d0963e59d,0.06,false,false,near_mint,en,EUR
 Action News Crew,TMT,Teenage Mutant Ninja Turtles,1,normal,common,1,111347,bc0f5ca8-47bd-4451-8fd1-a312ff7d31ec,0.02,false,false,near_mint,en,EUR
 "Leonardo, Leader in Blue",TMT,Teenage Mutant Ninja Turtles,16,normal,uncommon,1,111523,d6eaae35-d513-43d8-be2d-b97c15e25937,0.15,false,false,near_mint,en,EUR
@@ -7012,7 +7008,7 @@ Transdimensional Bovine,TMT,Teenage Mutant Ninja Turtles,134,normal,rare,2,11095
 Illegitimate Business,TMT,Teenage Mutant Ninja Turtles,186,normal,common,2,111583,71597acf-1ce6-46a8-b6c0-88755c8a377c,0.02,false,false,near_mint,en,EUR
 Utrom Scientists,TMT,Teenage Mutant Ninja Turtles,56,foil,common,1,111478,6da89625-5278-49d4-813b-a1a631f114f5,0.06,false,false,near_mint,en,EUR
 Negate,TMT,Teenage Mutant Ninja Turtles,47,normal,common,2,111242,52d58fe4-6070-4022-9cd7-c35a11b44525,0.03,false,false,near_mint,en,EUR
-Grounded for Life,TMT,Teenage Mutant Ninja Turtles,7,normal,common,3,111479,72388199-85fa-4eba-9a9c-c2904e6da9ed,0.02,false,false,near_mint,en,EUR
+Grounded for Life,TMT,Teenage Mutant Ninja Turtles,7,normal,common,4,111479,72388199-85fa-4eba-9a9c-c2904e6da9ed,0.02,false,false,near_mint,en,EUR
 Pain 101,TMT,Teenage Mutant Ninja Turtles,69,foil,common,1,111592,a1c70bf2-b2bd-4585-ba50-304f4dad8e62,0.07,false,false,near_mint,en,EUR
 "Raphael, Most Attitude",TMT,Teenage Mutant Ninja Turtles,101,foil,uncommon,1,111487,88385a87-f931-409f-8a21-250f0866d63d,0.23,false,false,near_mint,en,EUR
 Shredder's Revenge,TMT,Teenage Mutant Ninja Turtles,76,normal,common,3,111272,72fadf47-2e0b-4b24-b1bc-7c86780716b6,0.02,false,false,near_mint,en,EUR
@@ -7024,20 +7020,20 @@ Mutant Town,TMT,Teenage Mutant Ninja Turtles,187,foil,common,1,111601,c6eac43d-0
 "Bebop, Warthog Warrior",TMT,Teenage Mutant Ninja Turtles,59,foil,common,1,111560,371ba16d-73f7-450c-8b1f-c05012a4ca93,0.06,false,false,near_mint,en,EUR
 Ninja Teen,TMT,Teenage Mutant Ninja Turtles,67,normal,rare,1,110903,0825a28f-f60b-4f80-83e3-cad6f9b266ce,2.2,false,false,near_mint,en,EUR
 Stomped by the Foot,TMT,Teenage Mutant Ninja Turtles,82,normal,common,1,111566,3fdec16f-77f5-4792-9698-b9099a204028,0.02,false,false,near_mint,en,EUR
-East Wind Avatar,TMT,Teenage Mutant Ninja Turtles,5,normal,common,2,111516,c9d5b56c-ad2a-4958-8783-4eceb8733610,0.02,false,false,near_mint,en,EUR
-Nobody,TMT,Teenage Mutant Ninja Turtles,161,normal,common,4,111553,0966b8ff-61d3-4394-a357-97c35f042a29,0.02,false,false,near_mint,en,EUR
+East Wind Avatar,TMT,Teenage Mutant Ninja Turtles,5,normal,common,3,111516,c9d5b56c-ad2a-4958-8783-4eceb8733610,0.02,false,false,near_mint,en,EUR
+Nobody,TMT,Teenage Mutant Ninja Turtles,161,normal,common,5,111553,0966b8ff-61d3-4394-a357-97c35f042a29,0.02,false,false,near_mint,en,EUR
 Omni-Cheese Pizza,TMT,Teenage Mutant Ninja Turtles,176,normal,common,1,111609,f2c8397c-2014-4a43-9ed7-41795880011f,0.02,false,false,near_mint,en,EUR
 Turtle Blimp,TMT,Teenage Mutant Ninja Turtles,180,normal,uncommon,1,111581,6e118fc5-b0ae-4592-8292-d611856ae203,0.09,false,false,near_mint,en,EUR
 Hard-Won Jitte,TMT,Teenage Mutant Ninja Turtles,91,normal,uncommon,2,111250,5d3dc219-f024-49de-b88d-dc1e9e84184c,0.06,false,false,near_mint,en,EUR
 Karai's Technique,TMT,Teenage Mutant Ninja Turtles,152,normal,uncommon,1,111549,037fe188-3355-4724-b2eb-e2448fc55607,0.1,false,false,near_mint,en,EUR
 Dark Leo & Shredder,TMT,Teenage Mutant Ninja Turtles,142,normal,mythic,1,110947,bab93474-2f98-49a1-874f-b794bf81bd0c,6.7,false,false,near_mint,en,EUR
-Squirrelanoids,TMT,Teenage Mutant Ninja Turtles,81,normal,common,2,111597,be08d2b0-375b-434f-9e6d-060809e0ed34,0.02,false,false,near_mint,en,EUR
+Squirrelanoids,TMT,Teenage Mutant Ninja Turtles,81,normal,common,3,111597,be08d2b0-375b-434f-9e6d-060809e0ed34,0.02,false,false,near_mint,en,EUR
 Zoo Escapees,TMT,Teenage Mutant Ninja Turtles,138,normal,common,1,111542,f57ba8ff-2f8c-4ca1-9b13-42a7cc213e99,,false,false,near_mint,en,EUR
 "Michelangelo, Mutant BFF",TMT,Teenage Mutant Ninja Turtles,120,normal,uncommon,2,111436,02f7281f-b50c-4a1c-a2fc-3caeb6ab7d41,0.08,false,false,near_mint,en,EUR
 "Rocksteady, Crash Courser",TMT,Teenage Mutant Ninja Turtles,131,normal,common,1,111607,ebbb5756-80fa-406f-8daa-be1f5a6c3c80,0.02,false,false,near_mint,en,EUR
 Shredder's Revenge,TMT,Teenage Mutant Ninja Turtles,76,foil,common,2,111272,72fadf47-2e0b-4b24-b1bc-7c86780716b6,0.04,false,false,near_mint,en,EUR
 Foot Mystic,TMT,Teenage Mutant Ninja Turtles,63,normal,common,2,111577,61e40a18-6cc8-436d-826b-1cf8cd037df3,0.02,false,false,near_mint,en,EUR
-"Splinter, Hamato Yoshi",TMT,Teenage Mutant Ninja Turtles,79,normal,uncommon,2,111591,9ea9d072-aa98-405e-a475-26f93cc37e53,0.06,false,false,near_mint,en,EUR
+"Splinter, Hamato Yoshi",TMT,Teenage Mutant Ninja Turtles,79,normal,uncommon,3,111591,9ea9d072-aa98-405e-a475-26f93cc37e53,0.05,false,false,near_mint,en,EUR
 Illegitimate Business,TMT,Teenage Mutant Ninja Turtles,186,foil,common,2,111583,71597acf-1ce6-46a8-b6c0-88755c8a377c,0.04,false,false,near_mint,en,EUR
 "Lord Dregg, Insect Invader",TMT,Teenage Mutant Ninja Turtles,65,normal,uncommon,1,111588,8d1a9c8a-d0b6-4d83-a168-8078de4b14c7,0.09,false,false,near_mint,en,EUR
 Saved by the Shell,TMT,Teenage Mutant Ninja Turtles,132,normal,uncommon,1,111611,f6314c7f-41dc-4bbd-99db-3a8a1d2977b2,0.09,false,false,near_mint,en,EUR
@@ -7057,11 +7053,11 @@ Crustacean Commando,TMT,Teenage Mutant Ninja Turtles,33,normal,common,2,111496,9
 "Stockman, Mad Fly-entist",TMT,Teenage Mutant Ninja Turtles,54,normal,common,4,111435,01ca65e2-898e-4150-a6bf-e61b183fd98a,0.02,false,false,near_mint,en,EUR
 Mind Transfer Protocol,TMT,Teenage Mutant Ninja Turtles,45,normal,common,3,111447,2ddfcc4d-dd5f-42f1-8f33-a8e8b5354534,0.02,false,false,near_mint,en,EUR
 Mutant Town Musicians,TMT,Teenage Mutant Ninja Turtles,97,normal,common,4,111446,2dbe9207-06e8-4837-8227-0f960490771b,0.02,false,false,near_mint,en,EUR
-Bot Bashing Time,TMT,Teenage Mutant Ninja Turtles,85,normal,common,4,111552,08b3af61-d516-45ca-aede-2f50ba23cb07,0.02,false,false,near_mint,en,EUR
+Bot Bashing Time,TMT,Teenage Mutant Ninja Turtles,85,normal,common,5,111552,08b3af61-d516-45ca-aede-2f50ba23cb07,0.02,false,false,near_mint,en,EUR
 "Wingnut, Bat on the Belfry",TMT,Teenage Mutant Ninja Turtles,110,normal,uncommon,2,111457,40b9b1d0-b7d1-473e-b6a9-a29d527c2f35,0.15,false,false,near_mint,en,EUR
 Hamato Guardian Stance,TMT,Teenage Mutant Ninja Turtles,8,normal,common,3,111480,735b540b-b472-46fa-a232-d444cabf6c4c,0.02,false,false,near_mint,en,EUR
 "April O'Neil, Kunoichi Trainee",TMT,Teenage Mutant Ninja Turtles,3,normal,common,4,111587,8b1982ea-686b-4acd-b677-47571430efb0,0.02,false,false,near_mint,en,EUR
-"Leonardo, Big Brother",TMT,Teenage Mutant Ninja Turtles,14,normal,common,2,111534,e802838f-cc8c-4313-8c3b-32a6a7248e64,0.05,false,false,near_mint,en,EUR
+"Leonardo, Big Brother",TMT,Teenage Mutant Ninja Turtles,14,normal,common,3,111534,e802838f-cc8c-4313-8c3b-32a6a7248e64,0.04,false,false,near_mint,en,EUR
 Make Your Move,TMT,Teenage Mutant Ninja Turtles,20,normal,common,2,111537,ed8bdd98-6377-40cf-b381-cee38b1bda2a,0.02,false,false,near_mint,en,EUR
 TCRI Building,TMT,Teenage Mutant Ninja Turtles,189,normal,common,2,111586,8817a1d6-ef39-4e7c-8277-74aea012803b,0.02,false,false,near_mint,en,EUR
 Pain 101,TMT,Teenage Mutant Ninja Turtles,69,normal,common,4,111592,a1c70bf2-b2bd-4585-ba50-304f4dad8e62,0.03,false,false,near_mint,en,EUR
@@ -7070,12 +7066,12 @@ Mouser Foundry,TMT,Teenage Mutant Ninja Turtles,96,normal,common,3,111490,8aae3b
 Ragamuffin Raptor,TMT,Teenage Mutant Ninja Turtles,130,normal,common,3,111449,2edc1d40-3154-4ec0-88c7-faf35fd5e560,0.02,false,false,near_mint,en,EUR
 "Oroku Saki, Shredder Rising",TMT,Teenage Mutant Ninja Turtles,68,normal,common,3,111606,e65ff1f4-a061-4c31-a78e-92af6e7bc56f,0.02,false,false,near_mint,en,EUR
 Novel Nunchaku,TMT,Teenage Mutant Ninja Turtles,127,normal,uncommon,3,111540,f37ef012-c566-4d16-acf8-6079244907be,0.07,false,false,near_mint,en,EUR
-Frog Butler,TMT,Teenage Mutant Ninja Turtles,114,normal,common,5,111520,d1a72d09-9cfc-463a-a9ec-3359003d54da,0.02,false,false,near_mint,en,EUR
+Frog Butler,TMT,Teenage Mutant Ninja Turtles,114,normal,common,6,111520,d1a72d09-9cfc-463a-a9ec-3359003d54da,0.02,false,false,near_mint,en,EUR
 Cowabunga!,TMT,Teenage Mutant Ninja Turtles,113,normal,common,4,111183,0ffce972-bed9-445a-a9a0-4816f156d88d,0.02,false,false,near_mint,en,EUR
 Crop Rotation,PMEI,Media and Collaboration Promos,2026-02,foil,rare,1,111074,29dd649c-86b5-40a1-94b0-5859d03be9cd,5.0,false,false,near_mint,en,EUR
 Shredder's Armor,TMT,Teenage Mutant Ninja Turtles,75,normal,uncommon,1,111602,d2cbe512-725f-4884-ac49-a98a78e7d14e,0.02,false,false,near_mint,en,EUR
 "Don & Raph, Hard Science",TMT,Teenage Mutant Ninja Turtles,144,normal,rare,1,110921,4f38126c-26a9-4447-801f-4f19e84c4aa5,0.05,false,false,near_mint,en,EUR
-Bebop & Rocksteady,TMT,Teenage Mutant Ninja Turtles,140,normal,rare,1,109279,535461bd-f763-408b-816f-64b7bfb9210d,0.15,false,false,near_mint,en,EUR
+Bebop & Rocksteady,TMT,Teenage Mutant Ninja Turtles,140,normal,rare,2,109279,535461bd-f763-408b-816f-64b7bfb9210d,0.08,false,false,near_mint,en,EUR
 EPF Point Squad,TMT,Teenage Mutant Ninja Turtles,145,foil,common,1,111545,faab52c0-ce79-40af-a156-b193a62d439e,0.02,false,false,near_mint,en,EUR
 Foot Headquarters,TMT,Teenage Mutant Ninja Turtles,185,foil,common,1,111569,45e68113-3f05-4547-947d-4cb9ebfa73c7,0.03,false,false,near_mint,en,EUR
 Cat-Owl,TLA,Avatar: The Last Airbender,212,normal,common,1,108285,d7df3391-dbe5-4eb4-85c1-037c5f3ea971,0.02,false,false,near_mint,en,EUR
@@ -7101,7 +7097,7 @@ Mighty Mutanimals,TMT,Teenage Mutant Ninja Turtles,21,normal,uncommon,2,111467,5
 "Michelangelo, Weirdness to 11",TMT,Teenage Mutant Ninja Turtles,121,normal,rare,1,110906,18477047-218d-4b2a-a086-37431b6a3025,2.95,false,false,near_mint,en,EUR
 Shredder's Technique,TMT,Teenage Mutant Ninja Turtles,232,normal,uncommon,1,111220,4208f96f-49ea-46d9-b6fc-2093ded1fadb,0.09,false,false,near_mint,en,EUR
 "Agent Bishop, Man in Black",TMT,Teenage Mutant Ninja Turtles,2,normal,rare,1,110938,9c769202-178c-442a-a9e2-aa08b5ae5c9a,0.1,false,false,near_mint,en,EUR
-Dimension X,TMT,Teenage Mutant Ninja Turtles,183,normal,common,1,111558,1c244fc2-70f0-4149-b0d2-d49fc6bac2b0,0.02,false,false,near_mint,en,EUR
+Dimension X,TMT,Teenage Mutant Ninja Turtles,183,normal,common,2,111558,1c244fc2-70f0-4149-b0d2-d49fc6bac2b0,0.02,false,false,near_mint,en,EUR
 Everything Pizza,TMT,Teenage Mutant Ninja Turtles,173,foil,uncommon,1,111373,df2cdaa5-9ea0-4aa5-89d3-9edf40fa2a39,0.02,false,false,near_mint,en,EUR
 Retro-Mutation,TMT,Teenage Mutant Ninja Turtles,51,foil,common,1,111571,4af284ba-fa54-43c5-8c76-3e1128957452,0.02,false,false,near_mint,en,EUR
 Mechanized Ninja Cavalry,TMT,Teenage Mutant Ninja Turtles,156,foil,common,1,111445,2cb65388-dc6c-4e2a-93ac-49ea484849e9,0.02,false,false,near_mint,en,EUR
@@ -7114,11 +7110,11 @@ Michelangelo's Technique,TMT,Teenage Mutant Ninja Turtles,122,foil,rare,1,110912
 Blasphemous Act,TMC,Teenage Mutant Ninja Turtles Eternal,47,normal,rare,1,111370,dc6c4337-7d3e-4700-9473-26185c109166,0.29,false,false,near_mint,en,EUR
 Rhythm of the Wild,PZA,Teenage Mutant Ninja Turtles Source Material,12,normal,mythic,1,111381,e7843a8a-a8d8-4236-a05d-287fad0a74b1,1.0,false,false,near_mint,en,EUR
 "Michelangelo, Weirdness to 11",TMT,Teenage Mutant Ninja Turtles,214,foil,rare,1,111461,4b1f1162-9470-4dd7-94ef-83c09b50d8ae,5.89,false,false,near_mint,en,EUR
-Insectoid Exterminator,TMT,Teenage Mutant Ninja Turtles,64,normal,common,1,111615,ff26f7ff-7f70-4204-9b48-de9e21dc89ec,0.02,false,false,near_mint,en,EUR
+Insectoid Exterminator,TMT,Teenage Mutant Ninja Turtles,64,normal,common,2,111615,ff26f7ff-7f70-4204-9b48-de9e21dc89ec,0.02,false,false,near_mint,en,EUR
 "Ray Fillet, Man Ray",TMT,Teenage Mutant Ninja Turtles,49,normal,uncommon,1,111438,14e0892c-a556-43c3-974f-6be44188da2e,0.02,false,false,near_mint,en,EUR
 The Last Ronin,TMT,Teenage Mutant Ninja Turtles,154,foil,mythic,1,110927,72ab3ccf-3ddb-4dd1-9cfb-98802a18d954,1.25,false,false,near_mint,en,EUR
 Technodrome,TMT,Teenage Mutant Ninja Turtles,179,normal,mythic,1,110909,287f5ab0-b15b-4507-8a24-585f9a9841ad,3.0,false,false,near_mint,en,EUR
-Gran-Gran,PW25,Wizards Play Network 2025,14,normal,rare,1,109595,6fc7d4ed-9e30-4daa-997d-6916c916c5fd,0.02,false,false,near_mint,en,EUR
+Gran-Gran,PW25,Wizards Play Network 2025,14,normal,rare,2,109595,6fc7d4ed-9e30-4daa-997d-6916c916c5fd,0.02,false,false,near_mint,en,EUR
 Slickshot Show-Off,SCH,Store Championships,43,foil,rare,1,108040,5a668a8d-4426-49d5-855d-b422323d8180,3.0,false,false,near_mint,en,EUR
 Krang & Shredder,TMT,Teenage Mutant Ninja Turtles,153,normal,rare,1,110937,9b5437e2-e3f4-4c19-a2aa-a75f65a001bb,0.02,false,false,near_mint,en,EUR
 Escape Tunnel,TMT,Teenage Mutant Ninja Turtles,184,normal,common,1,111251,5df90940-15ea-418c-8547-6c75d69ec6d3,0.02,false,false,near_mint,en,EUR
@@ -7132,7 +7128,80 @@ Putrid Pals,TMT,Teenage Mutant Ninja Turtles,165,foil,common,1,111567,42cdb88d-6
 Stomped by the Foot,TMT,Teenage Mutant Ninja Turtles,82,foil,common,1,111566,3fdec16f-77f5-4792-9698-b9099a204028,0.02,false,false,near_mint,en,EUR
 Shredder's Technique,TMT,Teenage Mutant Ninja Turtles,77,normal,uncommon,1,111312,99a24349-7d11-421b-a161-c1edbb8f53b1,0.02,false,false,near_mint,en,EUR
 "Shredder, Unrelenting",TMT,Teenage Mutant Ninja Turtles,210,normal,uncommon,1,111459,43c80d9e-0180-491a-ab08-2ba00f273604,0.02,false,false,near_mint,en,EUR
-"Krang, Utrom Warlord",TMT,Teenage Mutant Ninja Turtles,175,normal,mythic,1,110930,88d36c32-d6f9-46e4-9cc8-08e6c0ff05d2,12.5,false,false,near_mint,en,EUR
-The Ooze,TMT,Teenage Mutant Ninja Turtles,177,normal,rare,1,110907,1f9bd4da-4626-40ba-95f4-14e3de36f989,6.5,false,false,near_mint,en,EUR
 Uneasy Alliance,TMT,Teenage Mutant Ninja Turtles,28,foil,common,2,111575,5d9a4f9a-1e3a-4de8-a7c0-7158c6703b4e,0.02,false,false,near_mint,en,EUR
 Foot Headquarters,TMT,Teenage Mutant Ninja Turtles,185,normal,common,2,111569,45e68113-3f05-4547-947d-4cb9ebfa73c7,0.02,false,false,near_mint,en,EUR
+Spicy Oatmeal Pizza,PW26,Wizards Play Network 2026,7,normal,rare,1,111434,cbe07254-5a32-45d6-b0c0-d842640deb47,0.9,false,false,near_mint,en,EUR
+Mental Modulation,EOE,Edge of Eternities,67,normal,common,1,107693,0f2d12fc-38a0-42e6-9caa-7c18bfcf0011,0.02,false,false,near_mint,en,EUR
+Territorial Bruntar,EOE,Edge of Eternities,165,normal,uncommon,1,107776,dbb25585-6048-4a85-828e-675bf0da6508,0.02,false,false,near_mint,en,EUR
+Stomping Ground,EOE,Edge of Eternities,258,foil,rare,1,106763,69be21b4-c613-47c6-ba57-f4785861af3e,6.9,false,false,near_mint,en,EUR
+"Lu Xun, Scholar General",PTK,Portal Three Kingdoms,48,normal,rare,1,34978,0882d4c8-32f1-4d86-b5c5-75a16697004c,2.67,false,false,near_mint,en,EUR
+Return to Battle,PTK,Portal Three Kingdoms,81,normal,common,1,34945,1841e615-fdcd-4187-bd69-d07abde0e1ae,0.29,false,false,near_mint,en,EUR
+Wu Light Cavalry,PTK,Portal Three Kingdoms,60,normal,common,1,34966,60e55b25-fde2-4b57-b5db-65b75262ff3d,0.43,false,false,near_mint,en,EUR
+Colossus Hammer,M20,Core Set 2020,223,normal,uncommon,1,45237,fa35b2b5-3e91-4a6c-90b1-8581b4ecaf8b,0.3,false,false,near_mint,en,EUR
+Abundant Growth,INR,Innistrad Remastered,406,normal,common,1,102757,c0c01b50-5b9b-4d53-ae74-ec1236a64b2b,0.02,false,false,near_mint,en,EUR
+Abundant Growth,DMC,Dominaria United Commander,128,normal,common,2,71520,6dba2d06-13af-464d-b007-9027cade1cdf,0.05,false,false,near_mint,en,EUR
+Sentinel's Eyes,THB,Theros Beyond Death,36,normal,common,2,47026,32adc118-b81e-48c2-b7ef-b62e8c3308d6,0.02,false,false,near_mint,en,EUR
+Sentinel's Eyes,THB,Theros Beyond Death,36,foil,common,1,47026,32adc118-b81e-48c2-b7ef-b62e8c3308d6,0.04,false,false,near_mint,en,EUR
+Breaking of the Fellowship,LTR,The Lord of the Rings: Tales of Middle-earth,568,normal,common,1,86404,2765a467-fe54-4840-b621-7e138db3bdeb,0.05,false,false,near_mint,en,EUR
+Thistledown Players,BLB,Bloomburrow,35,normal,common,1,95960,afa8d83f-8586-4127-8b55-9715e9547488,0.02,false,false,near_mint,en,EUR
+Finch Formation,BLB,Bloomburrow,50,normal,common,1,95899,1c671eab-d1ef-4d79-94eb-8b85f0d18699,0.02,false,false,near_mint,en,EUR
+Savor,BLB,Bloomburrow,109,normal,common,1,96178,1397f689-dca1-4d35-864b-92c5606afb9a,0.02,false,false,near_mint,en,EUR
+Wax-Wane Witness,BLB,Bloomburrow,39,normal,common,1,95971,d90ea719-5320-46c6-a347-161853a14776,0.02,false,false,near_mint,en,EUR
+Steampath Charger,BLB,Bloomburrow,153,normal,common,1,95890,03bf1296-e347-4070-8c6f-5c362c2f9364,0.02,false,false,near_mint,en,EUR
+Stargaze,BLB,Bloomburrow,114,normal,uncommon,1,95939,777fc599-8de7-44d2-8fdd-9bddf5948a0c,0.02,false,false,near_mint,en,EUR
+Splash Lasher,BLB,Bloomburrow,73,normal,uncommon,1,95910,362ee125-35a0-46cd-a201-e6797d12d33a,0.02,false,false,near_mint,en,EUR
+Azure Beastbinder,BLB,Bloomburrow,41,normal,rare,1,96007,211af1bf-910b-41a5-b928-f378188d1871,0.1,false,false,near_mint,en,EUR
+Salvation Swan,BLB,Bloomburrow,28,normal,rare,1,95635,b2656160-d319-4530-a6e5-c418596c3f12,0.02,false,false,near_mint,en,EUR
+Burrowguard Mentor,BLB,Bloomburrow,206,foil,uncommon,1,95945,87138ace-3594-499e-bad5-ec76148613ea,0.02,false,false,near_mint,en,EUR
+Tenderize,TMT,Teenage Mutant Ninja Turtles,133,normal,common,1,111511,bc19807b-09e8-4923-abc3-d4bbe8cde5fc,0.02,false,false,near_mint,en,EUR
+"General Traag, Heart of Stone",TMT,Teenage Mutant Ninja Turtles,90,normal,uncommon,1,111529,e02e971f-6008-4c82-acd2-2aed13009ccb,0.02,false,false,near_mint,en,EUR
+"Slash, Reptile Rampager",TMT,Teenage Mutant Ninja Turtles,108,normal,rare,1,110902,025aafbc-5b24-4f5b-9b4a-81f6b9cb5ef3,0.55,false,false,near_mint,en,EUR
+Ragamuffin Raptor,TMT,Teenage Mutant Ninja Turtles,130,foil,common,1,111449,2edc1d40-3154-4ec0-88c7-faf35fd5e560,0.02,false,false,near_mint,en,EUR
+TCRI Building,TMT,Teenage Mutant Ninja Turtles,189,foil,common,1,111586,8817a1d6-ef39-4e7c-8277-74aea012803b,0.02,false,false,near_mint,en,EUR
+Karai's Technique,TMT,Teenage Mutant Ninja Turtles,244,normal,uncommon,1,111604,e39a0633-3f65-4ae1-aef0-99018bbfa4f2,0.02,false,false,near_mint,en,EUR
+Mechan Navigator,EOE,Edge of Eternities,64,normal,uncommon,1,107507,a1fe1d39-42c8-41d0-8bf0-46973e4b07d4,0.02,false,false,near_mint,en,EUR
+Grounded for Life,TMT,Teenage Mutant Ninja Turtles,7,foil,common,1,111479,72388199-85fa-4eba-9a9c-c2904e6da9ed,0.02,false,false,near_mint,en,EUR
+Skateboard,TMT,Teenage Mutant Ninja Turtles,178,normal,uncommon,1,111527,deadb6d8-3eea-4261-a07c-8536df89e85c,0.02,false,false,near_mint,en,EUR
+Nutrient Block,EOE,Edge of Eternities,243,normal,common,1,107114,a26064bb-c568-4ed6-86db-3aab69b050db,0.02,false,false,near_mint,en,EUR
+Auxiliary Boosters,EOE,Edge of Eternities,5,foil,common,1,107714,43706295-afd6-442c-8828-8cf978152701,0.02,false,false,near_mint,en,EUR
+Phage the Untouchable,10E,Tenth Edition,166,normal,rare,1,25921,902c9b72-170c-4c25-a966-a55d689daae8,1.9,false,false,near_mint,en,EUR
+"Kess, Dissident Mage",C17,Commander 2017,39,foil,mythic,1,4416,01711ff6-475c-48c4-91f4-438433f88a95,0.5,false,false,near_mint,en,EUR
+Abzan Charm,2X2,Double Masters 2022,166,normal,uncommon,1,70080,1757a916-60d3-4f6b-8759-32a1645dadd2,0.02,false,false,near_mint,en,EUR
+Grim Hireling,AFC,Forgotten Realms Commander,294,normal,rare,1,60685,41d10e7a-a69a-478e-8317-6009502ab6d6,16.5,false,false,near_mint,en,EUR
+Emergent Ultimatum,IKO,Ikoria: Lair of Behemoths,185,normal,rare,1,49892,3a6a52ab-6d38-4429-9969-90064e615152,0.02,false,false,near_mint,en,EUR
+Whirlwind of Thought,IKO,Ikoria: Lair of Behemoths,215,normal,rare,1,49862,d0699cbc-b499-44a6-82e1-631491aaaec6,0.02,false,false,near_mint,en,EUR
+Soul of Windgrace,EOC,Edge of Eternities Commander,126,normal,mythic,1,107026,5a80f7e1-1d79-4302-a603-73eb060b97a6,0.09,false,false,near_mint,en,EUR
+Body of Research,STX,Strixhaven: School of Mages,168,normal,mythic,1,58234,98b56823-0076-49cc-b5aa-4accb8e2782e,0.1,false,false,near_mint,en,EUR
+Beseech the Queen,V16,From the Vault: Lore,1,foil,mythic,1,8112,8b5ffbfe-4b7c-4927-b2bd-f6c598a0bfeb,2.49,false,false,near_mint,en,EUR
+"Nicol Bolas, Dragon-God",WAR,War of the Spark,207,normal,mythic,1,44197,98b68dea-a7be-4f99-8a50-4c8cf0e0f7a9,1.4,false,false,near_mint,en,EUR
+Inspired Ultimatum,SPG,Special Guests,107,normal,mythic,1,104398,fe51805f-a2e3-4c29-a6a7-ca99537d13a8,0.8,false,false,near_mint,en,EUR
+"Nicol Bolas, God-Pharaoh",HOU,Hour of Devastation,140,normal,mythic,1,4535,985e92f4-3904-41df-91f7-42eedbe3ccd2,0.55,false,false,near_mint,en,EUR
+Archmage's Charm,MH1,Modern Horizons,40,normal,rare,1,44894,57b852b6-4388-4a41-a5c0-bba37a5c1451,0.8,false,false,near_mint,en,EUR
+Disruptive Student,USG,Urza's Saga,69,normal,common,1,35899,ee43681d-e0f7-422b-a363-0d630f68d363,0.02,false,false,near_mint,en,EUR
+Alabaster Potion,5ED,Fifth Edition,3,normal,common,1,38003,950acce3-b079-49fc-8016-75fcdbca9b82,0.02,false,false,near_mint,en,EUR
+Armor of Faith,5ED,Fifth Edition,8,normal,common,1,37998,0bdb3c08-aa9e-45d4-ae82-00019aee03b6,0.02,false,false,near_mint,en,EUR
+Brainwash,5ED,Fifth Edition,13,normal,common,1,37993,0afcbd6d-2b83-4393-9fc8-fe91f86117fe,0.02,false,false,near_mint,en,EUR
+Sowing Salt,UDS,Urza's Destiny,97,normal,uncommon,1,34748,de2f7251-f71a-47d2-a779-c898d94e807c,0.02,false,false,near_mint,en,EUR
+Trumpet Blast,UDS,Urza's Destiny,98,normal,common,1,34747,9fcce5fd-9efb-42fa-9cd6-ed45d8ee46d7,0.02,false,false,near_mint,en,EUR
+Caribou Range,5ED,Fifth Edition,14,normal,rare,1,37992,686022b1-359f-4348-a096-992140fff460,0.15,false,false,near_mint,en,EUR
+Armored Pegasus,6ED,Classic Sixth Edition,5,normal,common,1,35372,ed1b462d-4b0f-40cf-89a0-17a3e1c8a0ba,0.02,false,false,near_mint,en,EUR
+Serra Zealot,USG,Urza's Saga,46,normal,common,1,35922,0b311542-599f-4d2f-a871-18d5b0b7bbe5,0.02,false,false,near_mint,en,EUR
+Staunch Defenders,6ED,Classic Sixth Edition,45,normal,uncommon,1,35332,00d2c54f-a1f4-4015-a4f3-8cd360fa466d,0.02,false,false,near_mint,en,EUR
+Rune of Protection: Red,USG,Urza's Saga,40,normal,common,1,35928,2916023b-cf67-443f-9ac7-f03313f9d3b7,0.02,false,false,near_mint,en,EUR
+Disciple of Grace,USG,Urza's Saga,10,normal,common,1,35958,83fa36d2-0a60-40a5-a182-a63e1e65b2bd,0.02,false,false,near_mint,en,EUR
+Unsummon,6ED,Classic Sixth Edition,103,normal,common,1,35274,1ff96224-d6cd-492b-ab2f-3ec15b3230cb,0.02,false,false,near_mint,en,EUR
+Mask of Law and Grace,UDS,Urza's Destiny,11,normal,common,1,34834,6bd97150-b405-4bb5-b5a8-fceda4a45ebb,0.2,false,false,near_mint,en,EUR
+Armadillo Cloak,INV,Invasion,229,normal,common,2,33104,9d816f98-6cb6-432c-b0a4-a0eed21658ac,0.02,false,false,near_mint,en,EUR
+Ancestral Mask,MMQ,Mercadian Masques,229,normal,common,3,34181,1203f98a-fb6e-4f16-88e3-553eba177450,0.75,false,false,near_mint,en,EUR
+The Wise Mothman,SLD,Secret Lair Drop,2455,normal,mythic,1,110893,cfb80c75-4b1b-4f25-923a-933855e7345c,7.5,false,false,near_mint,en,EUR
+Arcane Signet,SLD,Secret Lair Drop,2464,normal,rare,1,110897,e12857ca-54af-453a-a2ad-b5622e7c9b0c,7.99,false,false,near_mint,en,EUR
+Umezawa's Jitte,PZA,Teenage Mutant Ninja Turtles Source Material,19,normal,mythic,1,111235,4ddaccfb-52e5-4448-8273-797cff31db2b,1.83,false,false,near_mint,en,EUR
+Fierce Guardianship,CMM,Commander Masters,94,normal,rare,1,85067,f7f3dd95-bd14-4e0f-a388-444f9cf1b0dc,34.2,false,false,near_mint,en,EUR
+Vandalblast,OTC,Outlaws of Thunder Junction Commander,183,normal,uncommon,1,93908,e781b55f-6388-4ab8-be74-7c56eaba1c4d,1.39,false,false,near_mint,en,EUR
+Preordain,OTC,Outlaws of Thunder Junction Commander,107,normal,common,1,93490,122f2cc2-5f4d-497c-96b5-ed5698f28b51,0.5,false,false,near_mint,en,EUR
+Sign in Blood,PLST,The List,P10-3,normal,rare,1,64991,e3fcd51a-77d2-41bc-b1ca-02f23c95a74e,2.44,false,false,near_mint,en,EUR
+Gifts Ungiven,2X2,Double Masters 2022,51,normal,rare,1,70503,cc950b6c-0346-4939-b36b-9f10a75f7a32,1.95,false,false,near_mint,en,EUR
+Snakeskin Veil,PCBB,Cowboy Bebop,5,foil,rare,1,93993,722b3cf0-f25b-4dbc-8885-d8eb96a7ce51,0.68,false,false,near_mint,en,EUR
+Lightning Strike,PCBB,Cowboy Bebop,4,foil,rare,1,93994,983f30b6-a65b-4a14-a9a0-e66870875b3e,0.45,false,false,near_mint,en,EUR
+Rancor,EMA,Eternal Masters,180,normal,uncommon,1,8495,abd96a99-c3a0-4923-80a1-51d26fc8bb91,0.5,false,false,near_mint,en,EUR
+Armadillo Cloak,DDE,Duel Decks: Phyrexia vs. the Coalition,58,normal,common,1,21983,679ba4c8-ea53-4e1f-a85d-76a5dfa5bc2c,0.2,false,false,near_mint,en,EUR
