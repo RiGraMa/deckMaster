@@ -16,6 +16,20 @@
   <div class="progress-bar">
     <div class="progress-fill" style="width: {{ (owned_count / total * 100)|round|int if total > 0 else 0 }}%"></div>
   </div>
+
+  <div class="export-actions">
+    <div class="export-group">
+      <span class="export-label">Full decklist</span>
+      <button type="button" class="btn btn-sm" id="copy-decklist">Copy</button>
+      <button type="button" class="btn btn-sm" id="download-decklist">Download .txt</button>
+    </div>
+    <div class="export-group">
+      <span class="export-label">Missing cards</span>
+      <button type="button" class="btn btn-sm" id="copy-missing"{% if not missing %} disabled{% endif %}>Copy</button>
+      <button type="button" class="btn btn-sm" id="download-missing"{% if not missing %} disabled{% endif %}>Download .txt</button>
+    </div>
+  </div>
+  <p class="export-hint">Plain text format — paste into Moxfield, Manabox, or Cardmarket.</p>
 </div>
 
 {% if owned %}
@@ -70,8 +84,62 @@
 {% endblock %}
 
 {% block scripts %}
+<script id="deck-export-data" type="application/json">
+{{ {"full": decklist_text, "missing": missing_text, "slug": commander} | tojson }}
+</script>
 <script>
+  const exportData = JSON.parse(document.getElementById('deck-export-data').textContent);
+  const deckSlug = exportData.slug
+    .replace(/\s*\(EDHREC\)\s*/i, '')
+    .replace(/\s*\(Custom\)\s*/i, '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
+  async function copyText(text, btn) {
+    try {
+      await navigator.clipboard.writeText(text);
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      btn.classList.add('btn-success');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('btn-success');
+      }, 1500);
+    } catch {
+      btn.textContent = 'Copy failed';
+      setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+    }
+  }
+
+  function downloadText(text, filename) {
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    link.click();
+    URL.revokeObjectURL(link.href);
+  }
+
+  document.getElementById('copy-decklist').addEventListener('click', function () {
+    copyText(exportData.full, this);
+  });
+
+  document.getElementById('download-decklist').addEventListener('click', function () {
+    downloadText(exportData.full, `${deckSlug}-decklist.txt`);
+  });
+
+  document.getElementById('copy-missing').addEventListener('click', function () {
+    copyText(exportData.missing, this);
+  });
+
+  document.getElementById('download-missing').addEventListener('click', function () {
+    downloadText(exportData.missing, `${deckSlug}-missing.txt`);
+  });
+
   const cards = document.querySelectorAll('.card-item');
+  const IMAGE_DELAY_MS = 200; // wait after each request before starting the next
   let index = 0;
 
   async function loadNext() {
@@ -104,7 +172,8 @@
       placeholder.querySelector('.spinner').style.display = 'none';
     }
 
-    setTimeout(loadNext, 110);
+    await new Promise(resolve => setTimeout(resolve, IMAGE_DELAY_MS));
+    loadNext();
   }
 
   loadNext();

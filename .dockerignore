@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.git/
+.gitignore
+.venv/
+venv/
+deckmaster/
+data/
+commanders/
+meta_cache/
+meta_decks/
+costume DeckLists/
+*.md
+test.py

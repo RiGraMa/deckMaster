@@ -11,9 +11,8 @@ routes/collection.py
 
 import os
 import csv
-import time
 from flask import Blueprint, render_template, jsonify, abort, request, current_app
-from routes.utils import get_collection, fetch_scryfall_image
+from web.routes.utils import get_collection, fetch_scryfall_image
 
 collection_bp = Blueprint("collection", __name__)
 
@@ -75,6 +74,11 @@ def parse_decklist(commander_folder):
     return cards
 
 
+def format_decklist_text(cards):
+    """Plain-text decklist: one 'quantity name' line per card."""
+    return "\n".join(f"{card['quantity']} {card['name']}" for card in cards)
+
+
 # ── Routes ────────────────────────────────────────────────────────────────────
 @collection_bp.route("/")
 def index():
@@ -129,6 +133,9 @@ def deck(commander_folder):
         commander=commander_folder,
         owned=owned,
         missing=missing,
+        decklist=decklist,
+        decklist_text=format_decklist_text(decklist),
+        missing_text=format_decklist_text(missing),
         total=sum(c["quantity"] for c in decklist),
         owned_count=sum(c["quantity"] for c in owned),
         missing_count=sum(c["quantity"] for c in missing),
@@ -148,7 +155,6 @@ def card_image():
     if not scryfall_id and not name:
         return jsonify({"error": "Provide ?id= or ?name="}), 400
 
-    time.sleep(0.1)
     image_uri = fetch_scryfall_image(scryfall_id=scryfall_id, name=name)
 
     if image_uri:

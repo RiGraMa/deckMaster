@@ -1,16 +1,4 @@
 """
-Backwards-compatible entrypoint.
-
-Actual script lives in `collection_tools/migrate_csv_to_db.py`.
-"""
-
-from collection_tools.migrate_csv_to_db import main
-
-
-if __name__ == "__main__":
-    main()
-
-"""
 CSV to SQLite Migration Script for DeckMaster
 
 Migrates collection.csv to collection.db with proper handling of:

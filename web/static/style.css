@@ -439,6 +439,52 @@ input[type="text"]:focus {
 
 .btn:active { transform: translateY(1px); }
 
+.btn-sm {
+  padding: 0.45rem 0.7rem;
+  font-size: 0.65rem;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-success {
+  border-color: rgba(76,172,108,0.55);
+  background: rgba(76,172,108,0.15);
+  color: var(--green);
+}
+
+.export-actions {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.export-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.export-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-right: 0.25rem;
+}
+
+.export-hint {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
 .form-hint {
   margin-top: 0.75rem;
   color: var(--text-dim);

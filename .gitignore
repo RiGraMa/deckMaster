@@ -11,6 +11,8 @@ commanders/
 costume DeckLists/
 meta_cache/
 meta_decks/
+data/*
+!data/.gitkeep
 
 # Database
 deckmaster.db

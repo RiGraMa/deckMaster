@@ -1,0 +1,25 @@
+# DeckMaster web app
+#
+# Quick start:
+#   1. Copy your ManaBox export to data/collection.csv
+#   2. docker compose up --build
+#   3. Open http://localhost:5000
+#
+# Re-import collection after updating the CSV:
+#   docker compose run --rm web python migrate_csv_to_db.py --yes
+#
+# Scrape a commander via CLI (optional):
+#   docker compose run --rm web python deckmaster.py --commander "Sol Ring"
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      COLLECTION_DB: /app/data/collection.db
+      COLLECTION_CSV: /app/data/collection.csv
+      COMMANDERS_DIR: /app/data/commanders
+    restart: unless-stopped
