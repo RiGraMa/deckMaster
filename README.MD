@@ -26,17 +26,18 @@ The core idea everywhere: **take a decklist → compare card names against my Ma
 
 ```
 deckMaster/
-├── app.py                      # Web entrypoint wrapper → imports web.app
+├── app.py                      # Web entrypoint wrapper → imports web.app (for gunicorn/Docker)
 ├── deckmaster.py               # CLI entrypoint wrapper → cli/deckmaster.py
 ├── meta_master.py              # Meta entrypoint wrapper → meta/meta_master.py
 ├── migrate_csv_to_db.py        # Migration wrapper → collection_tools/
-├── db_collection.py              # DB loader wrapper → collection_tools/
+├── db_collection.py            # DB loader wrapper → collection_tools/
+├── edhrec.py                   # Shared EDHREC scraper + JSON parsing (web + CLI)
 │
 ├── web/                        # Flask web application (the thing I actually use)
 │   ├── app.py                  # create_app(), config, blueprint registration
 │   ├── routes/
 │   │   ├── collection.py       # Home, deck view, card image API, export text
-│   │   ├── commander.py        # EDHREC scrape route + save deck files
+│   │   ├── commander.py        # /scrape route — saves CSVs, redirects to deck view
 │   │   └── utils.py            # SQLite collection lookup + Scryfall API
 │   ├── templates/              # Jinja2 HTML
 │   └── static/style.css        # Dark/gold MTG-ish theme
@@ -76,6 +77,53 @@ deckMaster/
 
 **Why wrappers at root?** So old commands still work (`python deckmaster.py`, `gunicorn app:app`)
 without remembering package paths. Real code lives in subfolders.
+
+---
+
+## Picking the project back up (Aug 2026)
+
+If I haven't touched this in months, this is the mental model:
+
+```mermaid
+flowchart LR
+    A[Browser or CLI] --> B[edhrec.py — scrape + parse]
+    B --> C[CSV files in commanders/]
+    C --> D[collection.py — deck view + owned vs missing]
+    D --> E[utils.py — Scryfall images]
+```
+
+### What happens when I scrape a commander
+
+1. I submit a name on `/scrape` (web) or run `deckmaster.py --commander "..."` (CLI)
+2. `edhrec.py` fetches `https://edhrec.com/average-decks/{slug}` and parses the `__NEXT_DATA__` JSON
+3. `web/routes/commander.py` (web) or `cli/deckmaster.py` (CLI) saves CSVs under `commanders/`
+4. Web redirects to `/deck/<folder>` — `web/routes/collection.py` reads the CSVs and compares against `collection.db`
+
+### Where to look when something breaks
+
+| Symptom | Start here |
+|---------|------------|
+| EDHREC scrape fails / empty decklist | `edhrec.py` |
+| Scrape form, save, redirect | `web/routes/commander.py` |
+| Deck page, owned vs missing, export | `web/routes/collection.py` |
+| Scryfall images / rate limiting | `web/routes/utils.py` |
+| CLI scraping or custom decklists | `cli/deckmaster.py` |
+| Collection import / DB schema | `collection_tools/migrate_csv_to_db.py` |
+| Docker won't start | `docker-compose.yml`, `Dockerfile`, `docker-entrypoint.sh` |
+
+### How to run it (quick)
+
+```bash
+docker compose up --build          # preferred — http://localhost:5000
+# scrape: http://localhost:5000/scrape
+# browse: http://localhost:5000
+```
+
+Local dev (from repo root — root `app.py` is a gunicorn wrapper, it does **not** start a server):
+
+```bash
+python -c "from web.app import app; app.run(debug=True, port=5000)"
+```
 
 ---
 
@@ -175,17 +223,38 @@ Custom decks from CLI use `(Custom)` suffix instead of `(EDHREC)`.
 
 ### EDHREC scraping — how it works
 
-EDHREC moved to Next.js. Old CSS scraping broke. Current method (both web + CLI):
+EDHREC moved to Next.js. Old CSS scraping broke. Shared implementation in **`edhrec.py`**
+(used by both web and CLI):
 
 1. URL: `https://edhrec.com/average-decks/{slug}`
 2. Slugify commander name: remove `,` and `'`, spaces → `-`, lowercase
    - `"K'rrik, Son of Yawgmoth"` → `krrik-son-of-yawgmoth`
+   - `"Namor the Sub-Mariner"` → `namor-the-sub-mariner`
 3. Parse `<script id="__NEXT_DATA__">` JSON blob
-4. Navigate: `props.pageProps.data.deck` → list of `"1 Card Name"` strings
-5. Split on first space for quantity + name
+4. Navigate: `props.pageProps.data.deck`
+5. Parse deck into `[{quantity, name}, ...]` — supports **two formats** (EDHREC changed this again in 2026):
 
-Web implementation: `web/routes/commander.py`
-CLI implementation: `cli/deckmaster.py` (uses `lxml` parser, web uses `html.parser`)
+**Legacy format** (list of strings):
+```json
+["1 Arcane Signet", "1 Counterspell"]
+```
+
+**Current format** (dict, as of Aug 2026):
+```json
+{
+  "commander": ["Namor the Sub-Mariner"],
+  "cards": {
+    "Artifact": [["Arcane Signet", 1], ["Sol Ring", 1]],
+    "Creature": [["Lord of Atlantis", 1]]
+  }
+}
+```
+
+If scraping suddenly returns "empty decklist" for a valid commander, EDHREC probably changed
+their JSON shape again — **`edhrec.py` → `parse_edhrec_deck()`** is the only place that needs updating.
+
+Web glue: `web/routes/commander.py` (save CSVs + redirect)
+CLI glue: `cli/deckmaster.py` (save CSVs + log paths)
 
 After scrape, web redirects to deck view. CLI logs file paths.
 
@@ -227,7 +296,7 @@ export DECKMASTER_CUSTOM_DECKLISTS="custom_decklists"
 ```bash
 pip install -r requirements.txt
 python migrate_csv_to_db.py --yes    # if collection.csv at repo root
-python app.py                         # debug server on :5000
+python -c "from web.app import app; app.run(debug=True, port=5000)"   # debug server on :5000
 # or
 gunicorn --bind 0.0.0.0:5000 app:app
 ```
@@ -363,8 +432,7 @@ gunicorn==22.0.0         # Production WSGI (Docker only)
 
 Built-in: `sqlite3`, `csv`, `json`, `argparse`, `logging`
 
-CLI also uses `lxml` parser in BeautifulSoup but it's not in requirements.txt —
-falls back to `html.parser` if lxml not installed (web already uses html.parser).
+EDHREC scraping uses `html.parser` (via `edhrec.py`) — no `lxml` dependency needed.
 
 ---
 
@@ -408,7 +476,7 @@ cp my-export.csv data/collection.csv      # or collection.csv at root for local
 python migrate_csv_to_db.py --yes
 
 # ── Web (local) ──
-python app.py
+python -c "from web.app import app; app.run(debug=True, port=5000)"
 gunicorn --bind 0.0.0.0:5000 app:app
 
 # ── Web (Docker) ──
@@ -435,6 +503,7 @@ docker compose run --rm web python migrate_csv_to_db.py --yes
 - Added SQLite migration from ManaBox CSV (Scryfall IDs for future web use)
 - Built Flask web app with card images via Scryfall API
 - EDHREC broke (CSS scraping) → switched to `__NEXT_DATA__` JSON parsing
+- EDHREC changed deck JSON from list-of-strings to dict format → extracted shared parser into `edhrec.py`
 - Added Meta Master for constructed formats (Pauper etc.) — MTGGoldfish blocked us
 - Rewrote meta scraper for MTGTop8 — still not really working, parked it
 - Added Docker setup so fresh clones are easy to run
@@ -452,5 +521,5 @@ docker compose run --rm web python migrate_csv_to_db.py --yes
 - [ ] Fix or delete Meta Master
 - [ ] Rename `costume DeckLists` → `custom_decklists` with migration helper
 - [ ] Consolidate data paths (always use `data/` even locally)
-- [ ] Basic tests for EDHREC JSON parsing and decklist text formatting
+- [ ] Basic tests for `edhrec.parse_edhrec_deck()` (both JSON formats) and decklist text formatting
 - [ ] `Makefile` with `make run`, `make migrate`, `make docker`

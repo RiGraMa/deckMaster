@@ -1,15 +1,13 @@
 """deckmaster.py"""
 
 
-import requests
-from bs4 import BeautifulSoup
 import csv
 import os
-import urllib.parse
 import logging
 import argparse
-import json
+
 import db_collection
+from edhrec import scrape_edhrec_average_deck, slugify_commander_name
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -99,68 +97,26 @@ def process_custom_decklist(decklist_path):
 def scrape_and_process_commander(commander_name):
     """
     Scrapes EDHREC data for a commander using JSON parsing.
-    
-    EDHREC now uses Next.js and stores data in __NEXT_DATA__ JSON.
-    This is more reliable than the old CSS selector method.
+
+    EDHREC stores data in __NEXT_DATA__ JSON (list or dict deck format).
     """
-    # Format and encode the commander's name for the URL
-    formatted_name = commander_name.replace(",", "").replace("'", "").replace(" ", "-").lower()
-    encoded_name = urllib.parse.quote(formatted_name)
+    formatted_name = slugify_commander_name(commander_name)
 
     # Create a directory for the commander with (EDHREC) suffix
     commander_folder = os.path.join(COMMANDERS_FOLDER, f"{formatted_name} (EDHREC)")
     create_folder_if_not_exists(commander_folder)
 
-    # Create the URL
-    url = f"https://edhrec.com/average-decks/{encoded_name}"
-    logging.info(f"Fetching data from: {url}")
-
     try:
-        # Send a GET request to the URL
-        response = requests.get(url)
-        response.raise_for_status()
+        rows, url = scrape_edhrec_average_deck(commander_name)
+        logging.info(f"Fetching data from: {url}")
+        logging.info(f"Found decklist with {len(rows)} cards")
 
-        # Parse the HTML content with BeautifulSoup
-        soup = BeautifulSoup(response.content, "lxml")
-
-        # NEW METHOD: Find the Next.js JSON data
-        next_data = soup.find('script', {'id': '__NEXT_DATA__', 'type': 'application/json'})
-        
-        if not next_data or not next_data.string:
-            logging.error("Could not find __NEXT_DATA__ in the page")
-            if os.path.exists(commander_folder) and not os.listdir(commander_folder):
-                os.rmdir(commander_folder)
-            return
-        
-        # Parse the JSON
-        data = json.loads(next_data.string)
-        
-        # Navigate to the decklist
-        page_data = data.get('props', {}).get('pageProps', {}).get('data', {})
-        decklist = page_data.get('deck', [])
-        
-        if not decklist:
-            logging.warning("Decklist not found in JSON data")
-            if os.path.exists(commander_folder) and not os.listdir(commander_folder):
-                os.rmdir(commander_folder)
-            return
-        
-        logging.info(f"Found decklist with {len(decklist)} cards")
-        
-        # Parse the decklist (format: "1 Card Name")
-        rows = []
-        for card_line in decklist:
-            # Split on first space to separate quantity from name
-            parts = card_line.split(' ', 1)
-            if len(parts) == 2:
-                rows.append(parts)  # [quantity, name]
-        
-        # Save the content to a CSV file
         csv_path = os.path.join(commander_folder, f"{formatted_name}.csv")
         with open(csv_path, mode="w", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
-            writer.writerow(["Quantity", "Name"])  # Write header
-            writer.writerows(rows)
+            writer.writerow(["Quantity", "Name"])
+            for row in rows:
+                writer.writerow([row["quantity"], row["name"]])
 
         logging.info(f"Decklist saved to {csv_path}")
 
@@ -180,7 +136,9 @@ def scrape_and_process_commander(commander_name):
             owned_cards = []
             not_owned_cards = []
 
-            for quantity, name in rows:
+            for row in rows:
+                quantity = row["quantity"]
+                name = row["name"]
                 card_name = name.strip().lower()
                 if card_name in collection_cards:
                     owned_cards.append([quantity, name])
@@ -205,12 +163,8 @@ def scrape_and_process_commander(commander_name):
         else:
             logging.warning("Collection file not found.")
 
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error fetching data: {e}")
-        if os.path.exists(commander_folder) and not os.listdir(commander_folder):
-            os.rmdir(commander_folder)
-    except json.JSONDecodeError as e:
-        logging.error(f"Error parsing JSON data: {e}")
+    except ValueError as e:
+        logging.error(f"Error scraping EDHREC: {e}")
         if os.path.exists(commander_folder) and not os.listdir(commander_folder):
             os.rmdir(commander_folder)
     except Exception as e:
